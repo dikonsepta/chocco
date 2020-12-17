@@ -1,0 +1,65 @@
+.why .container {
+    padding: 100px 0px;
+}
+
+.why__title {
+    margin-bottom: 19px;
+}
+
+.why__slogan {
+    width: 45%;
+    margin-bottom: 50px;
+}
+
+.why__benefits {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.benefits__item {
+    flex: 1;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    padding-right: 50px;
+    position: relative;
+
+    &:not(:last-child)::before {
+        position: absolute;
+        content: url("/2020-11-23-web-chocco/images/svg/dots.svg");
+        width: 67px;
+        top: 23%;
+        left: 81.5%;
+    }
+
+    &:last-child {
+        padding-right: 0px;
+    }
+
+    .benefits__title {
+        margin-bottom: 18px;
+    }
+}
+
+.benefits__gray {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 128px;
+    height: 128px;
+    background-color: #F2F5F4;
+    margin-bottom: 20px;
+}
+
+.benefits__pic {
+    height: 68px;
+    width: 68px;
+}
+
+.benefits__description p {
+    margin: 0 right;
+    width: 100%;
+}

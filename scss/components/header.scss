@@ -1,0 +1,41 @@
+.header .container {
+    flex-flow: row nowrap;
+    padding-top: 24px;
+}
+
+.header__logo .logo__pic {
+    height: 38px;
+}
+
+.header__menu {
+    flex: 1;
+    margin-bottom: 6px;
+    margin-left: 40px;
+    margin-right: 40px;
+
+    .menu__list {
+        display: flex;
+        justify-content: space-between;
+
+        .menu__item {
+            color: $white;
+            // margin-left: 27px;
+        }
+    }
+}
+
+.contacts__phone {
+    display: inline-flex;
+    align-items: center;
+    color: $white;
+    font-size: 22px;
+    line-height: .82;
+    margin-right: 10px;
+
+    .phone__pic {
+        display: inline-block;
+        margin-right: 6px;
+        width: 14px;
+        height: 14px;
+    }
+}

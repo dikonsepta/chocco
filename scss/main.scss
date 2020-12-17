@@ -1,0 +1,13 @@
+// setup
+@import "./layout/normalize.css";
+@import "./layout/layout.scss";
+@import "https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700&display=swap";
+
+// components
+@import "./components/decorat";
+@import "./components/header";
+@import "./components/cover";
+@import "./components/why";
+@import "./components/reviews";
+@import "./components/delivery";
+@import "./components/fixedmenu";

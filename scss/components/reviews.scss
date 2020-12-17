@@ -1,0 +1,95 @@
+.reviews .container {
+    padding: 62px 0px;
+}
+
+.reviews h2 {
+    z-index: 100;
+    margin-bottom: 32px;
+}
+
+.reviews h3,
+.reviews p,
+.reviews div {
+    text-align: left;
+}
+
+.reviews__card {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 42px;
+    background-color: #F8FAF9;
+
+    .card__pic {
+        width: 253px;
+        height: 264px;
+        background-image: url("/2020-11-23-web-chocco/images/photo/reviews-alena.jpg");
+        background-size: cover;
+    }
+
+    .card__info {
+        margin-left: 40px;
+        flex: 1;
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 83px;
+        height: 83px;
+        border-radius: 50%;
+        background-color: $white;
+        top: -17%;
+    }
+
+    &::after {
+        position: absolute;
+        content: url("/2020-11-23-web-chocco/images/decorate/pattern-5.png");
+        top: 7%;
+        right: 0%;
+    }
+}
+
+.card__title {
+    margin-bottom: 12px;
+}
+
+.card__description p {
+    margin-bottom: 25px;
+    width: 78%;
+}
+
+.reviews__list {
+    margin-top: 15px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.reviews__item {
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    margin-right: 6px;
+    border: 4px solid transparent;
+
+    @each $avatar in (alena, vadim, marina) {
+        &.#{$avatar} {
+            background: url("/2020-11-23-web-chocco/images/photo/reviews-#{$avatar}.jpg");
+            background-size: cover;
+        }
+    }
+
+    &.reviews__item--active,
+    &.reviews__item:hover {
+        border: 4px solid $deepgreen;
+    }
+}
+
+.reviews__link {
+    height: 100%;
+    width: 100%;
+}

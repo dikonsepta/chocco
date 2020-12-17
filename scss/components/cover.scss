@@ -1,0 +1,69 @@
+.cover {
+    height: 100%;
+}
+
+.cover .container {
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cover__topline {
+    width: 40%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.cover__title {
+    color: $white;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.cover__slogan p {
+    font-size: 21px;
+    line-height: 1.19;
+    color: $white;
+    margin-bottom: 30px;
+}
+
+.cover .candybar {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    .candybar__pic {
+        height: 83%;
+        margin: -29% 0 0 -4%;
+    }
+}
+
+.cover__properties {
+    display: flex;
+    margin-bottom: 13%;
+
+    .properties__menu {
+        .properties__item {
+            display: inline-flex;
+            flex-flow: row nowrap;
+            margin-right: 46px;
+        }
+    }
+}
+
+.properties__pic {
+    display: inline-flex;
+    margin-right: 10px;
+    width: 41px;
+    height: 41px;
+}
+
+.properties__slogan p {
+    width: 74px;
+    color: $white;
+    font-size: 16px;
+    line-height: 1.12;
+}

@@ -1,0 +1,672 @@
+@import "./layout/normalize.css";
+@import "https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700&display=swap";
+* {
+  font-family: "Alegreya Sans", "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.22;
+  color: #292929;
+  margin: 0;
+  padding: 0;
+  resize: none;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  background: center center no-repeat;
+  overflow: visible;
+  max-width: 100%;
+}
+
+html,
+body {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-width: 1100px;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+section {
+  position: relative;
+  min-width: 650px;
+  height: 100vh;
+}
+
+.container {
+  height: 100%;
+  width: 940px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section.template .container {
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+section.template h2 {
+  font-size: 48px;
+}
+section.template h3 {
+  text-transform: none;
+}
+section.template p {
+  color: #666666;
+}
+
+ul li {
+  list-style: none;
+  display: inline-block;
+}
+ul li:last-child {
+  margin-right: 0px;
+}
+
+a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: inline-block;
+}
+
+button {
+  padding: 21px 41px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.12;
+  cursor: pointer;
+}
+
+.button--white {
+  color: #365A49;
+  background-color: #FFFFFF;
+}
+.button--white:hover {
+  color: #497870;
+  background-color: #FFFFFF;
+}
+
+.button--green {
+  color: #FFFFFF;
+  background-color: #365A49;
+}
+.button--green:hover {
+  color: #FFFFFF;
+  background-color: #2E4E3F;
+}
+
+.button--link {
+  margin: 21px 22px;
+  padding: 0;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.22;
+  color: #497870;
+  text-transform: none;
+}
+.button--link:hover {
+  color: #292929;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 1.21;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.19;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 27px;
+  line-height: 1.19;
+  text-transform: uppercase;
+}
+
+section.welcome {
+  background: url("/2020-11-23-web-chocco/images/decorate/berry-1.png") 66% 83% no-repeat, url("/2020-11-23-web-chocco/images/decorate/sheet-1.png") 67% 98% no-repeat, url("/2020-11-23-web-chocco/images/decorate/sheet-2.png") 88% 68% no-repeat, url("/2020-11-23-web-chocco/images/decorate/sheet-3.png") 12% 98% no-repeat, url("/2020-11-23-web-chocco/images/decorate/candybar.png") top 45% right 22%/auto no-repeat, url("/2020-11-23-web-chocco/images/decorate/pattern-1.png") bottom right no-repeat;
+  background-color: #61C4D9;
+}
+section.welcome::after {
+  z-index: 100;
+  position: absolute;
+  content: url("/2020-11-23-web-chocco/images/decorate/berry-2.png");
+  top: 89%;
+  left: 76%;
+}
+
+section.why {
+  background: url("/2020-11-23-web-chocco/images/decorate/pattern-2.png") top 50% left no-repeat;
+  background-color: #FFFFFF;
+}
+section.why::after {
+  z-index: 1000;
+  position: absolute;
+  content: url("/2020-11-23-web-chocco/images/decorate/candyberry.png");
+  top: 68%;
+  left: 0%;
+}
+
+section.slider {
+  background-color: #F8FAF9;
+}
+
+section.reviews {
+  background: url("/2020-11-23-web-chocco/images/decorate/berry-5.png") top 10% right 12% no-repeat;
+  background-color: #FFFFFF;
+}
+section.reviews::before {
+  z-index: 1000;
+  position: absolute;
+  content: url("/2020-11-23-web-chocco/images/decorate/pattern-4.png");
+  top: 75%;
+  left: 0%;
+}
+section.reviews::after {
+  z-index: 1000;
+  position: absolute;
+  content: url("/2020-11-23-web-chocco/images/decorate/berry-6.png");
+  top: 82%;
+  left: 4%;
+}
+
+section.delivery {
+  background: url("/2020-11-23-web-chocco/images/decorate/berry-7.png") bottom 10% left 10% no-repeat, url("/2020-11-23-web-chocco/images/decorate/sheet-4.png") bottom 25% right 5% no-repeat, url("/2020-11-23-web-chocco/images/decorate/raspberry-bg.png") center center/100% auto no-repeat;
+}
+
+.header .container {
+  flex-flow: row nowrap;
+  padding-top: 24px;
+}
+
+.header__logo .logo__pic {
+  height: 38px;
+}
+
+.header__menu {
+  flex: 1;
+  margin-bottom: 6px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.header__menu .menu__list {
+  display: flex;
+  justify-content: space-between;
+}
+.header__menu .menu__list .menu__item {
+  color: #FFFFFF;
+}
+
+.contacts__phone {
+  display: inline-flex;
+  align-items: center;
+  color: #FFFFFF;
+  font-size: 22px;
+  line-height: 0.82;
+  margin-right: 10px;
+}
+.contacts__phone .phone__pic {
+  display: inline-block;
+  margin-right: 6px;
+  width: 14px;
+  height: 14px;
+}
+
+.cover {
+  height: 100%;
+}
+
+.cover .container {
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cover__topline {
+  width: 40%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.cover__title {
+  color: #FFFFFF;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.cover__slogan p {
+  font-size: 21px;
+  line-height: 1.19;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+}
+
+.cover .candybar {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.cover .candybar .candybar__pic {
+  height: 83%;
+  margin: -29% 0 0 -4%;
+}
+
+.cover__properties {
+  display: flex;
+  margin-bottom: 13%;
+}
+.cover__properties .properties__menu .properties__item {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  margin-right: 46px;
+}
+
+.properties__pic {
+  display: inline-flex;
+  margin-right: 10px;
+  width: 41px;
+  height: 41px;
+}
+
+.properties__slogan p {
+  width: 74px;
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 1.12;
+}
+
+.why .container {
+  padding: 100px 0px;
+}
+
+.why__title {
+  margin-bottom: 19px;
+}
+
+.why__slogan {
+  width: 45%;
+  margin-bottom: 50px;
+}
+
+.why__benefits {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.benefits__item {
+  flex: 1;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  padding-right: 50px;
+  position: relative;
+}
+.benefits__item:not(:last-child)::before {
+  position: absolute;
+  content: url("/2020-11-23-web-chocco/images/svg/dots.svg");
+  width: 67px;
+  top: 23%;
+  left: 81.5%;
+}
+.benefits__item:last-child {
+  padding-right: 0px;
+}
+.benefits__item .benefits__title {
+  margin-bottom: 18px;
+}
+
+.benefits__gray {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 128px;
+  height: 128px;
+  background-color: #F2F5F4;
+  margin-bottom: 20px;
+}
+
+.benefits__pic {
+  height: 68px;
+  width: 68px;
+}
+
+.benefits__description p {
+  margin: 0 right;
+  width: 100%;
+}
+
+.reviews .container {
+  padding: 62px 0px;
+}
+
+.reviews h2 {
+  z-index: 100;
+  margin-bottom: 32px;
+}
+
+.reviews h3,
+.reviews p,
+.reviews div {
+  text-align: left;
+}
+
+.reviews__card {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 42px;
+  background-color: #F8FAF9;
+}
+.reviews__card .card__pic {
+  width: 253px;
+  height: 264px;
+  background-image: url("/2020-11-23-web-chocco/images/photo/reviews-alena.jpg");
+  background-size: cover;
+}
+.reviews__card .card__info {
+  margin-left: 40px;
+  flex: 1;
+}
+.reviews__card::before {
+  position: absolute;
+  content: "";
+  width: 83px;
+  height: 83px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  top: -17%;
+}
+.reviews__card::after {
+  position: absolute;
+  content: url("/2020-11-23-web-chocco/images/decorate/pattern-5.png");
+  top: 7%;
+  right: 0%;
+}
+
+.card__title {
+  margin-bottom: 12px;
+}
+
+.card__description p {
+  margin-bottom: 25px;
+  width: 78%;
+}
+
+.reviews__list {
+  margin-top: 15px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviews__item {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  margin-right: 6px;
+  border: 4px solid transparent;
+}
+.reviews__item.alena {
+  background: url("/2020-11-23-web-chocco/images/photo/reviews-alena.jpg");
+  background-size: cover;
+}
+.reviews__item.vadim {
+  background: url("/2020-11-23-web-chocco/images/photo/reviews-vadim.jpg");
+  background-size: cover;
+}
+.reviews__item.marina {
+  background: url("/2020-11-23-web-chocco/images/photo/reviews-marina.jpg");
+  background-size: cover;
+}
+.reviews__item.reviews__item--active, .reviews__item.reviews__item:hover {
+  border: 4px solid #365A49;
+}
+
+.reviews__link {
+  height: 100%;
+  width: 100%;
+}
+
+.delivery .container {
+  padding: 62px 0px;
+  color: #497870;
+}
+.delivery .container .delivery__title {
+  color: #365A49;
+  margin-bottom: 46px;
+}
+
+form {
+  -webkit-user-select: none;
+          user-select: none;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+}
+form .parent__col {
+  column-count: 2;
+  column-gap: 36px;
+  margin-bottom: 37px;
+}
+form .parent__col:last-child {
+  margin-bottom: 0;
+}
+form * {
+  width: 100%;
+}
+form button,
+form .label__checkbox,
+form .label__radio {
+  width: auto;
+}
+form button p,
+form .label__checkbox p,
+form .label__radio p {
+  white-space: nowrap;
+}
+form p {
+  cursor: pointer;
+  margin-bottom: 2px;
+}
+
+.form__col {
+  display: flex;
+  flex: 1;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.form__row {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.form__rowwrap {
+  display: flex;
+  flex-flow: row wrap;
+}
+.form__rowwrap.h100 {
+  height: 100%;
+}
+.form__rowwrap .mt-37 {
+  margin-top: -37px;
+}
+.form__rowwrap .mt28 {
+  margin-top: 28px;
+}
+
+.label__input,
+.label__textarea {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-top: 12px;
+  margin-right: 14px;
+}
+.label__input:last-child,
+.label__textarea:last-child {
+  margin-right: 0;
+}
+
+input {
+  min-height: 58px;
+}
+
+textarea {
+  min-height: 58px;
+}
+
+.label__input input,
+.label__textarea textarea {
+  flex: 1;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  padding: 12px 12px 14px;
+  border: 3px solid transparent;
+}
+.label__input input:focus,
+.label__textarea textarea:focus {
+  border: 3px solid #DEE2BD;
+}
+
+.label__checkbox,
+.label__radio {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin-right: 24px;
+  margin-bottom: 18px;
+  cursor: pointer;
+}
+.label__checkbox:last-child,
+.label__radio:last-child {
+  margin-right: 0;
+}
+.label__checkbox input.checkbox,
+.label__checkbox input.radio,
+.label__radio input.checkbox,
+.label__radio input.radio {
+  display: none;
+}
+.label__checkbox p,
+.label__radio p {
+  margin-left: 10px;
+  margin-bottom: 0px;
+}
+
+.form__radio {
+  min-width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: relative;
+  background-color: #FFFFFF;
+}
+.form__radio::before {
+  opacity: 0;
+  content: "";
+  min-width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #365A49;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.radio:checked ~ .form__radio::before {
+  opacity: 1;
+}
+
+.form__checkbox {
+  min-width: 25px;
+  height: 25px;
+  border-radius: 4px;
+  position: relative;
+  background-color: #FFFFFF;
+}
+.form__checkbox .checkmark {
+  opacity: 0;
+  height: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.form__checkbox .checkbox:checked ~ .checkmark {
+  opacity: 1;
+}
+
+.fixedmenu {
+  z-index: 100;
+  position: fixed;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.fixedmenu__list {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.fixedmenu__item {
+  width: 16px;
+  height: 16px;
+  margin: 5px;
+  position: relative;
+}
+.fixedmenu__item::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fixedmenu__item--active .fixedmenu__link {
+  border: 1px solid #FFFFFF;
+}
+
+.fixedmenu__link {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid transparent;
+}

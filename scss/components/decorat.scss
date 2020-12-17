@@ -1,0 +1,68 @@
+section.welcome {
+    background:
+        url("/2020-11-23-web-chocco/images/decorate/berry-1.png") 66% 83% no-repeat,
+        url("/2020-11-23-web-chocco/images/decorate/sheet-1.png") 67% 98% no-repeat,
+        url("/2020-11-23-web-chocco/images/decorate/sheet-2.png") 88% 68% no-repeat,
+        url("/2020-11-23-web-chocco/images/decorate/sheet-3.png") 12% 98% no-repeat,
+        url("/2020-11-23-web-chocco/images/decorate/candybar.png") top 45% right 22% / auto no-repeat,
+        url("/2020-11-23-web-chocco/images/decorate/pattern-1.png") bottom right no-repeat;
+    background-color: #61C4D9;
+    // изменить единицы измерения?---------------------------------------------------------------------!>
+
+    // .cover .container {
+    //     background: url("/2020-11-23-web-chocco/images/decorate/candybar.png") top right / 60% auto no-repeat;
+    // }
+
+    &::after {
+        z-index: 100;
+        position: absolute;
+        content: url("/2020-11-23-web-chocco/images/decorate/berry-2.png");
+        top: 89%;
+        left: 76%;
+    }
+}
+
+section.why {
+    background: url("/2020-11-23-web-chocco/images/decorate/pattern-2.png") top 50% left no-repeat;
+    background-color: $white;
+
+    &::after {
+        z-index: 1000;
+        position: absolute;
+        content: url("/2020-11-23-web-chocco/images/decorate/candyberry.png");
+        top: 68%;
+        left: 0%;
+    }
+}
+
+section.slider {
+    background-color: #F8FAF9;
+}
+
+section.reviews {
+    background: url("/2020-11-23-web-chocco/images/decorate/berry-5.png") top 10% right 12% no-repeat;
+    background-color: $white;
+
+    &::before {
+        z-index: 1000;
+        position: absolute;
+        content: url("/2020-11-23-web-chocco/images/decorate/pattern-4.png");
+        top: 75%;
+        left: 0%;
+    }
+
+    &::after {
+        z-index: 1000;
+        position: absolute;
+        content: url("/2020-11-23-web-chocco/images/decorate/berry-6.png");
+        top: 82%;
+        left: 4%;
+    }
+}
+
+section.delivery {
+    background:
+        url("/2020-11-23-web-chocco/images/decorate/berry-7.png") bottom 10% left 10% no-repeat,
+        url("/2020-11-23-web-chocco/images/decorate/sheet-4.png") bottom 25% right 5% no-repeat,
+        url("/2020-11-23-web-chocco/images/decorate/raspberry-bg.png") center center / 100% auto no-repeat;
+}
