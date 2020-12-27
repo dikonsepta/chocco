@@ -1,14 +1,14 @@
 .why .container {
-    padding: 100px 0px;
+    padding: rem(100px) 0;
 }
 
 .why__title {
-    margin-bottom: 19px;
+    margin-bottom: rem(19px);
 }
 
 .why__slogan {
     width: 45%;
-    margin-bottom: 50px;
+    margin-bottom: rem(50px);
 }
 
 .why__benefits {
@@ -23,23 +23,23 @@
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    padding-right: 50px;
+    padding-right: rem(50px);
     position: relative;
 
     &:not(:last-child)::before {
         position: absolute;
         content: url("/2020-11-23-web-chocco/images/svg/dots.svg");
-        width: 67px;
+        width: rem(67px);
         top: 23%;
         left: 81.5%;
     }
 
     &:last-child {
-        padding-right: 0px;
+        padding-right: 0;
     }
 
     .benefits__title {
-        margin-bottom: 18px;
+        margin-bottom: rem(18px);
     }
 }
 
@@ -48,15 +48,15 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    width: 128px;
-    height: 128px;
+    width: rem(128px);
+    height: rem(128px);
     background-color: #F2F5F4;
-    margin-bottom: 20px;
+    margin-bottom: rem(20px);
 }
 
 .benefits__pic {
-    height: 68px;
-    width: 68px;
+    height: rem(68px);
+    width: rem(68px);
 }
 
 .benefits__description p {

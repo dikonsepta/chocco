@@ -1,10 +1,9 @@
-@import "./layout/normalize.css";
+@import "../css/normalize.css";
 @import "https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700&display=swap";
 * {
   font-family: "Alegreya Sans", "Roboto", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
   line-height: 1.22;
   color: #292929;
   margin: 0;
@@ -20,34 +19,57 @@
 
 html,
 body {
+  font-size: 18px;
   height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
 }
+@media (max-width: 768px) {
+  html,
+body {
+    font-size: 17px;
+  }
+}
+@media (max-width: 480px) {
+  html,
+body {
+    font-size: 16px;
+  }
+}
 
 .wrapper {
   position: relative;
   width: 100%;
-  min-width: 1100px;
   min-height: 100%;
   overflow: hidden;
 }
 
 section {
   position: relative;
-  min-width: 650px;
+  min-width: 36.1111111111rem;
   height: 100vh;
 }
 
 .container {
+  max-width: 61.1111111111rem;
+  width: 95%;
   height: 100%;
-  width: 940px;
   margin: 0 auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 42.6666666667rem;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    max-width: 26.6666666667rem;
+  }
 }
 
 section.template .container {
@@ -57,7 +79,7 @@ section.template .container {
   text-align: center;
 }
 section.template h2 {
-  font-size: 48px;
+  font-size: 2.6666666667rem;
 }
 section.template h3 {
   text-transform: none;
@@ -71,7 +93,7 @@ ul li {
   display: inline-block;
 }
 ul li:last-child {
-  margin-right: 0px;
+  margin-right: 0;
 }
 
 a {
@@ -82,14 +104,15 @@ a {
 
 img {
   display: inline-block;
+  display: block;
 }
 
 button {
-  padding: 21px 41px;
-  border-radius: 100px;
+  padding: 1.1666666667rem 2.2777777778rem;
+  border-radius: 5.5555555556rem;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 0.8888888889rem;
   line-height: 1.12;
   cursor: pointer;
 }
@@ -113,10 +136,10 @@ button {
 }
 
 .button--link {
-  margin: 21px 22px;
+  margin: 1.1666666667rem 1.2222222222rem;
   padding: 0;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 1rem;
   line-height: 1.22;
   color: #497870;
   text-transform: none;
@@ -127,21 +150,21 @@ button {
 
 h1 {
   font-weight: bold;
-  font-size: 48px;
+  font-size: 2.6666666667rem;
   line-height: 1.21;
   text-transform: uppercase;
 }
 
 h2 {
   font-weight: bold;
-  font-size: 36px;
+  font-size: 2rem;
   line-height: 1.19;
   text-transform: uppercase;
 }
 
 h3 {
   font-weight: bold;
-  font-size: 27px;
+  font-size: 1.5rem;
   line-height: 1.19;
   text-transform: uppercase;
 }
@@ -199,18 +222,18 @@ section.delivery {
 
 .header .container {
   flex-flow: row nowrap;
-  padding-top: 24px;
+  padding-top: 1.3333333333rem;
 }
 
 .header__logo .logo__pic {
-  height: 38px;
+  height: 2.1111111111rem;
 }
 
 .header__menu {
   flex: 1;
-  margin-bottom: 6px;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-bottom: 0.3333333333rem;
+  margin-left: 2.2222222222rem;
+  margin-right: 2.2222222222rem;
 }
 .header__menu .menu__list {
   display: flex;
@@ -224,15 +247,15 @@ section.delivery {
   display: inline-flex;
   align-items: center;
   color: #FFFFFF;
-  font-size: 22px;
+  font-size: 1.2222222222rem;
   line-height: 0.82;
-  margin-right: 10px;
+  margin-right: 0.5555555556rem;
 }
 .contacts__phone .phone__pic {
   display: inline-block;
-  margin-right: 6px;
-  width: 14px;
-  height: 14px;
+  margin-right: 0.3333333333rem;
+  width: 0.7777777778rem;
+  height: 0.7777777778rem;
 }
 
 .cover {
@@ -256,15 +279,15 @@ section.delivery {
 
 .cover__title {
   color: #FFFFFF;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-top: 0.5555555556rem;
+  margin-bottom: 1.1111111111rem;
 }
 
 .cover__slogan p {
-  font-size: 21px;
+  font-size: 1.1666666667rem;
   line-height: 1.19;
   color: #FFFFFF;
-  margin-bottom: 30px;
+  margin-bottom: 1.6666666667rem;
 }
 
 .cover .candybar {
@@ -284,34 +307,34 @@ section.delivery {
 .cover__properties .properties__menu .properties__item {
   display: inline-flex;
   flex-flow: row nowrap;
-  margin-right: 46px;
+  margin-right: 2.5555555556rem;
 }
 
 .properties__pic {
   display: inline-flex;
-  margin-right: 10px;
-  width: 41px;
-  height: 41px;
+  margin-right: 0.5555555556rem;
+  width: 2.2777777778rem;
+  height: 2.2777777778rem;
 }
 
 .properties__slogan p {
-  width: 74px;
+  width: 4.1111111111rem;
   color: #FFFFFF;
-  font-size: 16px;
+  font-size: 0.8888888889rem;
   line-height: 1.12;
 }
 
 .why .container {
-  padding: 100px 0px;
+  padding: 5.5555555556rem 0;
 }
 
 .why__title {
-  margin-bottom: 19px;
+  margin-bottom: 1.0555555556rem;
 }
 
 .why__slogan {
   width: 45%;
-  margin-bottom: 50px;
+  margin-bottom: 2.7777777778rem;
 }
 
 .why__benefits {
@@ -326,21 +349,21 @@ section.delivery {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  padding-right: 50px;
+  padding-right: 2.7777777778rem;
   position: relative;
 }
 .benefits__item:not(:last-child)::before {
   position: absolute;
   content: url("/2020-11-23-web-chocco/images/svg/dots.svg");
-  width: 67px;
+  width: 3.7222222222rem;
   top: 23%;
   left: 81.5%;
 }
 .benefits__item:last-child {
-  padding-right: 0px;
+  padding-right: 0;
 }
 .benefits__item .benefits__title {
-  margin-bottom: 18px;
+  margin-bottom: 1rem;
 }
 
 .benefits__gray {
@@ -348,15 +371,15 @@ section.delivery {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  width: 128px;
-  height: 128px;
+  width: 7.1111111111rem;
+  height: 7.1111111111rem;
   background-color: #F2F5F4;
-  margin-bottom: 20px;
+  margin-bottom: 1.1111111111rem;
 }
 
 .benefits__pic {
-  height: 68px;
-  width: 68px;
+  height: 3.7777777778rem;
+  width: 3.7777777778rem;
 }
 
 .benefits__description p {
@@ -365,12 +388,12 @@ section.delivery {
 }
 
 .reviews .container {
-  padding: 62px 0px;
+  padding: 3.4444444444rem 0;
 }
 
 .reviews h2 {
   z-index: 100;
-  margin-bottom: 32px;
+  margin-bottom: 1.7777777778rem;
 }
 
 .reviews h3,
@@ -385,24 +408,24 @@ section.delivery {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  padding: 42px;
+  padding: 2.3333333333rem;
   background-color: #F8FAF9;
 }
 .reviews__card .card__pic {
-  width: 253px;
-  height: 264px;
+  width: 14.0555555556rem;
+  height: 14.6666666667rem;
   background-image: url("/2020-11-23-web-chocco/images/photo/reviews-alena.jpg");
   background-size: cover;
 }
 .reviews__card .card__info {
-  margin-left: 40px;
+  margin-left: 2.2222222222rem;
   flex: 1;
 }
 .reviews__card::before {
   position: absolute;
   content: "";
-  width: 83px;
-  height: 83px;
+  width: 4.6111111111rem;
+  height: 4.6111111111rem;
   border-radius: 50%;
   background-color: #FFFFFF;
   top: -17%;
@@ -415,16 +438,16 @@ section.delivery {
 }
 
 .card__title {
-  margin-bottom: 12px;
+  margin-bottom: 0.6666666667rem;
 }
 
 .card__description p {
-  margin-bottom: 25px;
+  margin-bottom: 1.3888888889rem;
   width: 78%;
 }
 
 .reviews__list {
-  margin-top: 15px;
+  margin-top: 0.8333333333rem;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -432,11 +455,11 @@ section.delivery {
 }
 
 .reviews__item {
-  width: 74px;
-  height: 74px;
+  width: 4.1111111111rem;
+  height: 4.1111111111rem;
   border-radius: 50%;
-  margin-right: 6px;
-  border: 4px solid transparent;
+  margin-right: 0.3333333333rem;
+  border: 0.2222222222rem solid transparent;
 }
 .reviews__item.alena {
   background: url("/2020-11-23-web-chocco/images/photo/reviews-alena.jpg");
@@ -451,7 +474,7 @@ section.delivery {
   background-size: cover;
 }
 .reviews__item.reviews__item--active, .reviews__item.reviews__item:hover {
-  border: 4px solid #365A49;
+  border: 0.2222222222rem solid #365A49;
 }
 
 .reviews__link {
@@ -460,12 +483,12 @@ section.delivery {
 }
 
 .delivery .container {
-  padding: 62px 0px;
+  padding: 3.4444444444rem 0;
   color: #497870;
 }
 .delivery .container .delivery__title {
   color: #365A49;
-  margin-bottom: 46px;
+  margin-bottom: 2.5555555556rem;
 }
 
 form {
@@ -477,8 +500,8 @@ form {
 }
 form .parent__col {
   column-count: 2;
-  column-gap: 36px;
-  margin-bottom: 37px;
+  column-gap: 2rem;
+  margin-bottom: 2.0555555556rem;
 }
 form .parent__col:last-child {
   margin-bottom: 0;
@@ -498,7 +521,7 @@ form .label__radio p {
 }
 form p {
   cursor: pointer;
-  margin-bottom: 2px;
+  margin-bottom: 0.1111111111rem;
 }
 
 .form__col {
@@ -522,18 +545,18 @@ form p {
   height: 100%;
 }
 .form__rowwrap .mt-37 {
-  margin-top: -37px;
+  margin-top: -2.0555555556rem;
 }
 .form__rowwrap .mt28 {
-  margin-top: 28px;
+  margin-top: 1.5555555556rem;
 }
 
 .label__input,
 .label__textarea {
   display: flex;
   flex-flow: column nowrap;
-  margin-top: 12px;
-  margin-right: 14px;
+  margin-top: 0.6666666667rem;
+  margin-right: 0.7777777778rem;
 }
 .label__input:last-child,
 .label__textarea:last-child {
@@ -541,24 +564,24 @@ form p {
 }
 
 input {
-  min-height: 58px;
+  min-height: 3.2222222222rem;
 }
 
 textarea {
-  min-height: 58px;
+  min-height: 3.2222222222rem;
 }
 
 .label__input input,
 .label__textarea textarea {
   flex: 1;
   background-color: #FFFFFF;
-  border-radius: 4px;
-  padding: 12px 12px 14px;
-  border: 3px solid transparent;
+  border-radius: 0.2222222222rem;
+  padding: 0.6666666667rem 0.6666666667rem 0.7777777778rem;
+  border: 0.1666666667rem solid transparent;
 }
 .label__input input:focus,
 .label__textarea textarea:focus {
-  border: 3px solid #DEE2BD;
+  border: 0.1666666667rem solid #DEE2BD;
 }
 
 .label__checkbox,
@@ -566,8 +589,8 @@ textarea {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  margin-right: 24px;
-  margin-bottom: 18px;
+  margin-right: 1.3333333333rem;
+  margin-bottom: 1rem;
   cursor: pointer;
 }
 .label__checkbox:last-child,
@@ -582,13 +605,13 @@ textarea {
 }
 .label__checkbox p,
 .label__radio p {
-  margin-left: 10px;
-  margin-bottom: 0px;
+  margin-left: 0.5555555556rem;
+  margin-bottom: 0;
 }
 
 .form__radio {
-  min-width: 25px;
-  height: 25px;
+  min-width: 1.3888888889rem;
+  height: 1.3888888889rem;
   border-radius: 50%;
   position: relative;
   background-color: #FFFFFF;
@@ -596,8 +619,8 @@ textarea {
 .form__radio::before {
   opacity: 0;
   content: "";
-  min-width: 13px;
-  height: 13px;
+  min-width: 0.7222222222rem;
+  height: 0.7222222222rem;
   border-radius: 50%;
   position: absolute;
   background-color: #365A49;
@@ -610,15 +633,15 @@ textarea {
 }
 
 .form__checkbox {
-  min-width: 25px;
-  height: 25px;
-  border-radius: 4px;
+  min-width: 1.3888888889rem;
+  height: 1.3888888889rem;
+  border-radius: 0.2222222222rem;
   position: relative;
   background-color: #FFFFFF;
 }
 .form__checkbox .checkmark {
   opacity: 0;
-  height: 8px;
+  height: 0.4444444444rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -642,15 +665,15 @@ textarea {
 }
 
 .fixedmenu__item {
-  width: 16px;
-  height: 16px;
-  margin: 5px;
+  width: 0.8888888889rem;
+  height: 0.8888888889rem;
+  margin: 0.2777777778rem;
   position: relative;
 }
 .fixedmenu__item::before {
   content: "";
-  width: 6px;
-  height: 6px;
+  width: 0.3333333333rem;
+  height: 0.3333333333rem;
   border-radius: 50%;
   background-color: #FFFFFF;
   position: absolute;
@@ -660,13 +683,13 @@ textarea {
 }
 
 .fixedmenu__item--active .fixedmenu__link {
-  border: 1px solid #FFFFFF;
+  border: 0.0555555556rem solid #FFFFFF;
 }
 
 .fixedmenu__link {
-  width: 16px;
-  height: 16px;
+  width: 0.8888888889rem;
+  height: 0.8888888889rem;
   border-radius: 50%;
   background-color: transparent;
-  border: 1px solid transparent;
+  border: 0.0555555556rem solid transparent;
 }

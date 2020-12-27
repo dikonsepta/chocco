@@ -19,15 +19,15 @@
 
 .cover__title {
     color: $white;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: rem(10px);
+    margin-bottom: rem(20px);
 }
 
 .cover__slogan p {
-    font-size: 21px;
+    font-size: rem(21px);
     line-height: 1.19;
     color: $white;
-    margin-bottom: 30px;
+    margin-bottom: rem(30px);
 }
 
 .cover .candybar {
@@ -49,21 +49,21 @@
         .properties__item {
             display: inline-flex;
             flex-flow: row nowrap;
-            margin-right: 46px;
+            margin-right: rem(46px);
         }
     }
 }
 
 .properties__pic {
     display: inline-flex;
-    margin-right: 10px;
-    width: 41px;
-    height: 41px;
+    margin-right: rem(10px);
+    width: rem(41px);
+    height: rem(41px);
 }
 
 .properties__slogan p {
-    width: 74px;
+    width: rem(74px);
     color: $white;
-    font-size: 16px;
+    font-size: rem(16px);
     line-height: 1.12;
 }
