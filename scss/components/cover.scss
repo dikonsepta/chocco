@@ -6,9 +6,22 @@
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: flex-start;
+    padding-bottom: rem(112px);
 }
 
 .cover__topline {
+
+    @include tablet {
+        text-align: center;
+        width: 100%;
+        align-items: center;
+
+        &::before {
+            content: url("/2020-11-23-web-chocco/images/decorate/comp.png");
+            margin-top: rem(10px);
+        }
+    }
+
     width: 40%;
     display: flex;
     flex-flow: column wrap;
@@ -18,32 +31,42 @@
 }
 
 .cover__title {
+
+    @include tablet {
+        margin-top: rem(16px);
+        margin-bottom: rem(4px);
+    }
+
     color: $white;
-    margin-top: rem(10px);
+    margin-top: rem(19px);
     margin-bottom: rem(20px);
 }
 
 .cover__slogan p {
+
+    @include tablet {
+        margin-right: rem(170px);
+        margin-bottom: rem(23px);
+        margin-left: rem(170px);
+    }
+
     font-size: rem(21px);
     line-height: 1.19;
     color: $white;
-    margin-bottom: rem(30px);
-}
-
-.cover .candybar {
-    display: flex;
-    align-items: center;
-    height: 100%;
-
-    .candybar__pic {
-        height: 83%;
-        margin: -29% 0 0 -4%;
-    }
+    margin-bottom: rem(32px);
 }
 
 .cover__properties {
+
+    @include tablet {
+        display: none;
+    }
+
+    @include phone {
+        display: none;
+    }
+
     display: flex;
-    margin-bottom: 13%;
 
     .properties__menu {
         .properties__item {

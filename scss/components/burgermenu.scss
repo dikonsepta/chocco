@@ -1,0 +1,27 @@
+.burgermenu {
+    @include tablet {
+        width: 26px;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    @include phone {
+        width: 26px;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    display: none;
+    margin: 0 5px;
+}
+
+.burgermenu__line {
+    border-radius: 10px;
+    height: 4.2px;
+    background-color: $white;
+    margin-bottom: 5.4px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

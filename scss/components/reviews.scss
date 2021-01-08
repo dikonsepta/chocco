@@ -1,7 +1,3 @@
-.reviews .container {
-    padding: rem(62px) 0;
-}
-
 .reviews h2 {
     z-index: 100;
     margin-bottom: rem(32px);
@@ -11,27 +7,74 @@
 .reviews p,
 .reviews div {
     text-align: left;
+
+    @include tablet {
+        text-align: center;
+    }
 }
 
 .reviews__card {
+    width: 100%;
     position: relative;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    padding: rem(42px);
     background-color: #F8FAF9;
+    padding: rem(42px);
+    flex-flow: row nowrap;
+
+    @include tablet {
+        padding: rem(56px) rem(26px) rem(36px);
+        flex-flow: column nowrap;
+    }
 
     .card__pic {
         width: rem(253px);
         height: rem(264px);
-        background-image: url("/2020-11-23-web-chocco/images/photo/reviews-alena.jpg");
-        background-size: cover;
+        margin-bottom: 0;
+
+        @include tablet {
+            width: rem(130px);
+            height: rem(130px);
+            margin-bottom: rem(32px);
+        }
+
+        @each $avatar in (alena, vadim, marina) {
+            &.#{$avatar} {
+                background: url("/2020-11-23-web-chocco/images/photo/reviews-#{$avatar}.jpg");
+                background-size: cover;
+
+                @if #{$avatar}=="alena" {
+                    background-position-x: 78%;
+                    background-position-y: 38%;
+                    background-size: 105%;
+                    ;
+                }
+
+                @if #{$avatar}=="vadim" {
+                    background-position-x: 45%;
+                    background-position-y: 41%;
+                    background-size: 360%;
+                }
+
+                @if #{$avatar}=="marina" {
+                    background-position-x: 52%;
+                    background-position-y: 6%;
+                    background-size: 250%;
+                }
+            }
+        }
     }
 
     .card__info {
-        margin-left: rem(40px);
         flex: 1;
+        margin-bottom: rem(10px);
+        margin-left: rem(40px);
+
+        @include tablet {
+            margin-left: 0;
+        }
     }
 
     &::before {
@@ -41,32 +84,53 @@
         height: rem(83px);
         border-radius: 50%;
         background-color: $white;
-        top: -17%;
+        top: rem(-63px);
+
+        @include tablet {
+            top: rem(-48px);
+        }
     }
 
     &::after {
         position: absolute;
         content: url("/2020-11-23-web-chocco/images/decorate/pattern-5.png");
-        top: 7%;
-        right: 0%;
+        right: 0;
+        top: 5%;
+
+        @include tablet {
+            top: 3%;
+        }
     }
 }
 
 .card__title {
     margin-bottom: rem(12px);
+
+    @include tablet {
+        margin-bottom: rem(16px);
+    }
 }
 
 .card__description p {
     margin-bottom: rem(25px);
     width: 78%;
+
+    @include tablet {
+        margin-bottom: rem(16px);
+        width: 100%;
+    }
 }
 
 .reviews__list {
-    margin-top: rem(15px);
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+    margin-top: rem(16px);
+
+    @include tablet {
+        margin-top: rem(32px);
+    }
 }
 
 .reviews__item {
@@ -80,6 +144,24 @@
         &.#{$avatar} {
             background: url("/2020-11-23-web-chocco/images/photo/reviews-#{$avatar}.jpg");
             background-size: cover;
+
+            @if #{$avatar}=="alena" {
+                background-position-x: 50%;
+                background-position-y: 40%;
+                background-size: 120%;
+            }
+
+            @if #{$avatar}=="vadim" {
+                background-position-x: 45%;
+                background-position-y: 42%;
+                background-size: 400%;
+            }
+
+            @if #{$avatar}=="marina" {
+                background-position-x: 50%;
+                background-position-y: 15%;
+                background-size: 300%;
+            }
         }
     }
 

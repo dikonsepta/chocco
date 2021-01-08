@@ -1,31 +1,46 @@
 .delivery .container {
-    padding: rem(62px) 0;
     color: $green;
 
     .delivery__title {
+        white-space: nowrap;
         color: $deepgreen;
         margin-bottom: rem(46px);
+
+        @include tablet {
+            margin-top:  rem(10px);
+            margin-bottom: rem(20px);
+        }
+    }
+}
+
+@include tablet {
+    .container__form--center {
+        padding: 0 rem(120px);
     }
 }
 
 form {
+    * {
+        width: 100%;
+    }
+
+    margin-bottom: rem(16px);
     user-select: none;
-    width: 100%;
-    height: 100%;
     text-align: left;
 
     .parent__col {
         column-count: 2;
         column-gap: rem(36px);
-        margin-bottom: rem(37px);
+        margin-bottom: rem(38px);
 
         &:last-child {
             margin-bottom: 0;
         }
-    }
 
-    * {
-        width: 100%;
+        @include tablet {
+            column-count: 1;
+            column-gap: 0;
+        }
     }
 
     button,
@@ -39,6 +54,7 @@ form {
     }
 
     p {
+        color: $green !important;
         cursor: pointer;
         margin-bottom: rem(2px);
     }
@@ -61,16 +77,16 @@ form {
     display: flex;
     flex-flow: row wrap;
 
+    @include tablet {
+        flex-flow: column nowrap;
+    }
+
     &.h100 {
         height: 100%;
     }
 
     .mt-37 {
         margin-top: rem(-37px);
-    }
-
-    .mt28 {
-        margin-top: rem(28px);
     }
 }
 
@@ -88,10 +104,18 @@ form {
 
 input {
     min-height: rem(58px);
+
+    @include tablet {
+        min-height: rem(36px);
+    }
 }
 
 textarea {
     min-height: rem(58px);
+
+    @include tablet {
+        min-height: rem(82px);
+    }
 }
 
 .label__input input,
@@ -99,11 +123,28 @@ textarea {
     flex: 1;
     background-color: $white;
     border-radius: rem(4px);
-    padding: rem(12px) rem(12px) rem(14px);
     border: rem(3px) solid transparent;
+    padding: rem(12px) rem(12px) rem(14px);
 
     &:focus {
         border: rem(3px) solid #DEE2BD;
+    }
+
+    @include tablet {
+        font-size: rem(14px);
+        line-height: 1.43;
+        padding: rem(7px) rem(10px) rem(7px);
+    }
+}
+
+.checkboxes {
+    @include tablet {
+        flex-flow: row wrap;
+        margin-top: rem(22px);
+
+        .label__checkbox:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -174,5 +215,34 @@ textarea {
 
     .checkbox:checked~.checkmark {
         opacity: 1;
+    }
+}
+
+.buttons {
+    margin-top: rem(28px);
+
+    @include tablet {
+        margin-top: rem(36px);
+        justify-content: center;
+    }
+}
+
+.textarea__desktop {
+    textarea {
+        height: 100%;
+    }
+
+    display: block;
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.textarea__mobil {
+    display: none;
+
+    @include tablet {
+        display: block;
     }
 }

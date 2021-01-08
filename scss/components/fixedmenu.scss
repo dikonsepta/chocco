@@ -1,7 +1,17 @@
 .fixedmenu {
+
+    @include tablet {
+        display: none;
+    }
+
+    @include phone {
+        display: none;
+    }
+
     z-index: 100;
     position: fixed;
-    right: 5%;
+    right: rem(42px);
+    padding-bottom: rem(42px);
     top: 50%;
     transform: translateY(-50%);
 }
@@ -14,7 +24,7 @@
 .fixedmenu__item {
     width: rem(16px);
     height: rem(16px);
-    margin: rem(5px);
+    margin: rem(2.5px);
     position: relative;
 
     &::before {

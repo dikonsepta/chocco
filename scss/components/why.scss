@@ -1,45 +1,62 @@
-.why .container {
-    padding: rem(100px) 0;
-}
-
 .why__title {
-    margin-bottom: rem(19px);
+    margin-bottom: rem(20px);
+
+    @include tablet {
+        margin-bottom: rem(5px);
+    }
 }
 
 .why__slogan {
-    width: 45%;
     margin-bottom: rem(50px);
+    width: 48%;
+
+    @include tablet {
+        width: 64%;
+    }
 }
 
 .why__benefits {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
     align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: rem(20px); // костыль
+
+    @include tablet {
+        margin: 0;
+    }
+
+    .benefits__description p {
+        text-align: center;
+        width: 100%;
+    }
 }
 
 .benefits__item {
-    flex: 1;
+    width: 30%;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     align-items: center;
-    padding-right: rem(50px);
     position: relative;
 
-    &:not(:last-child)::before {
+    &:not(:last-child)::after {
         position: absolute;
         content: url("/2020-11-23-web-chocco/images/svg/dots.svg");
         width: rem(67px);
         top: 23%;
-        left: 81.5%;
-    }
+        left: 95.5%;
 
-    &:last-child {
-        padding-right: 0;
+        @include tablet {
+            display: none;
+        }
     }
 
     .benefits__title {
         margin-bottom: rem(18px);
+
+        @include tablet {
+            margin-bottom: rem(8px);
+        }
     }
 }
 
@@ -57,9 +74,4 @@
 .benefits__pic {
     height: rem(68px);
     width: rem(68px);
-}
-
-.benefits__description p {
-    margin: 0 right;
-    width: 100%;
 }

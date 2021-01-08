@@ -21,3 +21,11 @@ git add .
 git commit -m "незначительное изменение"
 git push
 ```
+
+---
+
+## Чтобы удалить коммит с GitHub'а
+```bash
+git reset --hard __хэш коммита, к которому хотим вернуться__
+git push --force
+```
