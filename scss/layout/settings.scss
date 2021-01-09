@@ -14,9 +14,9 @@
 //     display: none;
 // }
 
-// section.delivery {
-//     display: none;
-// }
+// // section.delivery {
+// //     display: none;
+// // }
 
 // TOTAL settings
 $f: 18px;
@@ -90,7 +90,7 @@ body {
 
 section {
     position: relative;
-    min-width: 650px;
+    min-height: 650px;
     height: 100vh;
 }
 
@@ -132,6 +132,11 @@ section.template {
 
     h2 {
         font-size: rem(48px);
+
+        @include phone {
+            font-size: rem(40px);
+            line-height: 0.9;
+        }
     }
 
     h3 {

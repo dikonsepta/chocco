@@ -1,18 +1,19 @@
 .burgermenu {
     @include tablet {
+        margin: 0 5px;
         width: 26px;
         display: flex;
         flex-flow: column nowrap;
     }
 
     @include phone {
+        margin: 0;
         width: 26px;
         display: flex;
         flex-flow: column nowrap;
     }
 
     display: none;
-    margin: 0 5px;
 }
 
 .burgermenu__line {

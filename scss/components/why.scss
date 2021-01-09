@@ -4,6 +4,10 @@
     @include tablet {
         margin-bottom: rem(5px);
     }
+
+    @include phone {
+        margin-bottom: rem(12px);
+    }
 }
 
 .why__slogan {
@@ -13,22 +17,52 @@
     @include tablet {
         width: 64%;
     }
+
+    @include phone {
+        width: 100%;
+    }
 }
 
 .why__benefits {
     display: flex;
     flex-flow: row nowrap;
-    align-items: flex-start;
     justify-content: space-between;
-    margin-bottom: rem(20px); // костыль
+    margin-bottom: rem(20px);
 
     @include tablet {
         margin: 0;
     }
 
-    .benefits__description p {
-        text-align: center;
+    @include phone {
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        margin-bottom: rem(-26px);
+    }
+
+    .benefits__info {
+        display: flex;
+        flex-flow: column nowrap;
+
+        @include phone {
+            margin-left: rem(12px);
+            align-items: flex-start;
+        }
+    }
+
+    .benefits__description {
         width: 100%;
+
+        @include phone {
+            width: 90%;
+        }
+
+        p {
+            text-align: center;
+
+            @include phone {
+                text-align: start;
+            }
+        }
     }
 }
 
@@ -51,11 +85,21 @@
         }
     }
 
+    @include phone {
+        width: 100%;
+        flex-flow: row nowrap;
+        margin-bottom: rem(30px);
+    }
+
     .benefits__title {
         margin-bottom: rem(18px);
 
         @include tablet {
             margin-bottom: rem(8px);
+        }
+
+        @include phone {
+            margin-bottom: rem(14px);
         }
     }
 }
@@ -65,10 +109,14 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    width: rem(128px);
-    height: rem(128px);
+    min-width: rem(128px);
+    min-height: rem(128px);
     background-color: #F2F5F4;
     margin-bottom: rem(20px);
+
+    @include phone {
+        margin-bottom: 0;
+    }
 }
 
 .benefits__pic {

@@ -1,92 +1,115 @@
-.cover {
-    height: 100%;
-}
+    .cover {
+        height: 100%;
+    }
 
-.cover .container {
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding-bottom: rem(112px);
-}
+    .cover .container {
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-bottom: rem(112px);
+    }
 
-.cover__topline {
+    .cover__topline {
+        flex: 1;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        width: 40%;
+        align-items: flex-start;
 
-    @include tablet {
-        text-align: center;
-        width: 100%;
-        align-items: center;
+        @include tablet {
+            .cover__slogan {
+                display: flex;
+                justify-content: center;
+            }
 
-        &::before {
-            content: url("/2020-11-23-web-chocco/images/decorate/comp.png");
-            margin-top: rem(10px);
+            text-align: center;
+            width: 100%;
+            align-items: center;
+
+            &::before {
+                content: url("/2020-11-23-web-chocco/images/decorate/comp-tablet.png");
+                margin-top: rem(10px);
+            }
+        }
+
+        @include phone {
+            &::before {
+                content: "";
+                width: 100%;
+                height: 72vw;
+                background: url("/2020-11-23-web-chocco/images/decorate/comp-phone.png") center center / contain no-repeat;
+                margin-top: rem(10px);
+            }
         }
     }
 
-    width: 40%;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: flex-start;
-    flex: 1;
-}
+    .cover__title {
+        color: $white;
+        margin-top: rem(19px);
+        margin-bottom: rem(20px);
 
-.cover__title {
+        @include tablet {
+            margin-top: rem(16px);
+            margin-bottom: rem(4px);
+        }
 
-    @include tablet {
-        margin-top: rem(16px);
-        margin-bottom: rem(4px);
-    }
-
-    color: $white;
-    margin-top: rem(19px);
-    margin-bottom: rem(20px);
-}
-
-.cover__slogan p {
-
-    @include tablet {
-        margin-right: rem(170px);
-        margin-bottom: rem(23px);
-        margin-left: rem(170px);
-    }
-
-    font-size: rem(21px);
-    line-height: 1.19;
-    color: $white;
-    margin-bottom: rem(32px);
-}
-
-.cover__properties {
-
-    @include tablet {
-        display: none;
-    }
-
-    @include phone {
-        display: none;
-    }
-
-    display: flex;
-
-    .properties__menu {
-        .properties__item {
-            display: inline-flex;
-            flex-flow: row nowrap;
-            margin-right: rem(46px);
+        @include phone {
+            margin-top: rem(20px);
+            margin-bottom: rem(8px);
         }
     }
-}
 
-.properties__pic {
-    display: inline-flex;
-    margin-right: rem(10px);
-    width: rem(41px);
-    height: rem(41px);
-}
+    .cover__slogan p {
+        font-size: rem(21px);
+        line-height: 1.19;
+        color: $white;
+        margin-bottom: rem(32px);
 
-.properties__slogan p {
-    width: rem(74px);
-    color: $white;
-    font-size: rem(16px);
-    line-height: 1.12;
-}
+        @include tablet {
+            padding: 0 21%;
+            margin-bottom: rem(23px);
+        }
+
+        @include phone {
+            font-size: rem(18px);
+            line-height: 1.11;
+            padding: 0 15%;
+            margin-bottom: rem(26px);
+        }
+    }
+
+    .cover__properties {
+
+        @include tablet {
+            display: none;
+        }
+
+        @include phone {
+            display: none;
+        }
+
+        display: flex;
+
+        .properties__menu {
+            .properties__item {
+                display: inline-flex;
+                flex-flow: row nowrap;
+                margin-right: rem(46px);
+            }
+        }
+    }
+
+    .properties__pic {
+        display: inline-flex;
+        margin-right: rem(10px);
+        width: rem(41px);
+        height: rem(41px);
+    }
+
+    .properties__slogan p {
+        width: rem(74px);
+        color: $white;
+        font-size: rem(16px);
+        line-height: 1.12;
+    }

@@ -2,7 +2,7 @@ section.welcome {
     background: url("/2020-11-23-web-chocco/images/decorate/berry-1.png") 71% 83% no-repeat,
         url("/2020-11-23-web-chocco/images/decorate/sheet-1.png") 71% 96% no-repeat,
         url("/2020-11-23-web-chocco/images/decorate/sheet-2.png") 99% 70% no-repeat,
-        url("/2020-11-23-web-chocco/images/decorate/candybar.png") 95% 46% no-repeat,
+        url("/2020-11-23-web-chocco/images/decorate/candybar.png") top 47% left 52vw no-repeat, //95% 46%
         url("/2020-11-23-web-chocco/images/decorate/pattern-1.png") bottom right no-repeat;
 
     &::before {
@@ -36,7 +36,7 @@ section.welcome {
     }
 
     @include phone {
-        background: url();
+        background: url("/2020-11-23-web-chocco/images/decorate/pattern-1.png") right top 20% / 66% no-repeat;
 
         &::before {
             display: none;
@@ -132,14 +132,16 @@ section.reviews {
     }
 
     @include phone {
-        background: url();
+        background-position: top 2.5% right -8%;
 
         &::before {
-            display: none;
+            top: 82.5%;
+            left: -2%;
         }
 
         &::after {
-            display: none;
+            top: 88.5%;
+            left: -6.5%;
         }
 
         background-color: $white;

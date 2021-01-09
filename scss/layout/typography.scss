@@ -3,6 +3,11 @@
     font-size: rem(48px);
     line-height: 1.21;
     text-transform: uppercase;
+
+    @include phone {
+        font-size: rem(40px);
+        line-height: 0.9;
+    }
 }
 
 h1 {
@@ -14,6 +19,11 @@ h1 {
     font-size: rem(36px);
     line-height: 1.19;
     text-transform: uppercase;
+
+    @include phone {
+        font-size: rem(40px);
+        line-height: 0.9;
+    }
 }
 
 h2 {
