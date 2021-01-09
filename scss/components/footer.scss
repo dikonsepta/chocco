@@ -1,0 +1,83 @@
+footer {
+    height: auto;
+
+    .container {
+        padding-top: rem(18px);
+        padding-bottom: rem(18px);
+
+        @include tablet {
+            padding-top: rem(28px);
+            padding-bottom: rem(28px);
+        }
+
+        @include phone {
+            padding-top: rem(20px);
+            padding-bottom: rem(36px);
+            flex-flow: column nowrap;
+        }
+    }
+}
+
+.footer__contacts {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: center;
+
+
+    @include phone {
+        align-items: center;
+    }
+}
+
+.contacts__address {
+    font-size: rem(21px);
+}
+
+.contacts__phone {
+    font-size: rem(21px);
+    color: $green;
+    margin-top: rem(6px);
+
+    @include phone {
+        margin-top: rem(12px);
+    }
+}
+
+.networks__list,
+.networks__item {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.networks__list {
+    margin-top: rem(16px);
+
+    @include phone {
+        margin-top: rem(20px);
+    }
+}
+
+.networks__item {
+    margin-right: rem(14px);
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+.networks__link {
+    @each $networks__link in (vk, fb, in, tv) {
+        &.#{$networks__link} {
+            background-image: url("/2020-11-23-web-chocco/images/svg/networks--#{$networks__link}.svg");
+            background-size: contain;
+        }
+    }
+
+    max-width: 20px;
+    min-width: 20px;
+    max-height: 20px;
+    min-height: 20px;
+}

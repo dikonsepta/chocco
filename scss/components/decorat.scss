@@ -164,4 +164,16 @@ section.delivery {
     @include phone {
         background: url("/2020-11-23-web-chocco/images/decorate/raspberry-bg.png") center center / cover no-repeat;
     }
+
+    background-color: #CFDEDB;
+}
+
+
+section.map {
+    background: url("/2020-11-23-web-chocco/images/decorate/map.png") center center / cover no-repeat;
+}
+
+
+section.footer {
+    background-color: $white;
 }
