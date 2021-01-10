@@ -16,7 +16,9 @@
     flex-shrink: 0;
 
     .logo__pic {
+        fill: $white;
         height: rem(38px);
+        width: rem(52.6px);
     }
 }
 
@@ -74,6 +76,7 @@
     margin-right: rem(10px);
 
     .phone__pic {
+        fill: $white;
         display: inline-block;
         margin-right: rem(6px);
         width: rem(14px);

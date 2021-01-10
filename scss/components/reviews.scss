@@ -113,8 +113,8 @@
         background: url("/2020-11-23-web-chocco/images/decorate/pattern-5.png") center center / contain no-repeat;
         top: 5%;
         right: 0;
-        width: 127px;
-        height: 167px;
+        width: rem(127px);
+        height: rem(167px);
 
         @include tablet {
             top: 3%;

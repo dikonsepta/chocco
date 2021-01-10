@@ -34,13 +34,17 @@ footer {
     font-size: rem(21px);
 }
 
-.contacts__phone {
+footer .contacts__phone {
     font-size: rem(21px);
     color: $green;
     margin-top: rem(6px);
 
     @include phone {
         margin-top: rem(12px);
+    }
+
+    .phone__pic {
+        fill: $green;
     }
 }
 
@@ -68,16 +72,27 @@ footer {
     }
 }
 
-.networks__link {
-    @each $networks__link in (vk, fb, in, tv) {
-        &.#{$networks__link} {
-            background-image: url("/2020-11-23-web-chocco/images/svg/networks--#{$networks__link}.svg");
-            background-size: contain;
-        }
-    }
+.networks__link,
+.networks__pic {
+    max-width: rem(20px);
+    min-width: rem(20px);
+    max-height: rem(20px);
+    min-height: rem(20px);
+}
 
-    max-width: 20px;
-    min-width: 20px;
-    max-height: 20px;
-    min-height: 20px;
+.networks__link {
+    // @each $networks__link in (vk, fb, in, tv) {
+    //     &.#{$networks__link} {
+    //         background-image: url("/2020-11-23-web-chocco/images/svg/networks--#{$networks__link}.svg");
+    //         background-size: contain;
+    //     }
+    // }
+}
+
+.networks__pic {
+    fill: #B3B3B3;
+
+    &:hover {
+        fill: $black;
+    }
 }

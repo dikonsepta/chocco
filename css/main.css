@@ -87,8 +87,8 @@ section.template .container {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 3.3333333333rem;
+  padding-bottom: 3.3333333333rem;
 }
 section.template h2 {
   font-size: 2.6666666667rem;
@@ -374,7 +374,9 @@ section.footer {
   flex-shrink: 0;
 }
 .header__logo .logo__pic {
+  fill: #FFFFFF;
   height: 2.1111111111rem;
+  width: 2.9222222222rem;
 }
 
 .header__menu {
@@ -431,6 +433,7 @@ section.footer {
   margin-right: 0.5555555556rem;
 }
 .contacts__phone .phone__pic {
+  fill: #FFFFFF;
   display: inline-block;
   margin-right: 0.3333333333rem;
   width: 0.7777777778rem;
@@ -540,6 +543,7 @@ section.footer {
 }
 
 .properties__pic {
+  fill: #C6F7FF;
   display: inline-flex;
   margin-right: 0.5555555556rem;
   width: 2.2777777778rem;
@@ -636,10 +640,14 @@ section.footer {
 }
 .benefits__item:not(:last-child)::after {
   position: absolute;
-  content: url("/2020-11-23-web-chocco/images/svg/dots.svg");
+  content: "";
   width: 3.7222222222rem;
+  height: 1.1666666667rem;
   top: 23%;
   left: 95.5%;
+  background-color: #F2F5F4;
+  -webkit-mask-image: url("/2020-11-23-web-chocco/images/svg/dots.svg");
+          mask-image: url("/2020-11-23-web-chocco/images/svg/dots.svg");
 }
 @media (max-width: 768px) {
   .benefits__item:not(:last-child)::after {
@@ -684,6 +692,7 @@ section.footer {
 }
 
 .benefits__pic {
+  fill: #292929;
   height: 3.7777777778rem;
   width: 3.7777777778rem;
 }
@@ -806,8 +815,8 @@ section.footer {
   background: url("/2020-11-23-web-chocco/images/decorate/pattern-5.png") center center/contain no-repeat;
   top: 5%;
   right: 0;
-  width: 127px;
-  height: 167px;
+  width: 7.0555555556rem;
+  height: 9.2777777778rem;
 }
 @media (max-width: 768px) {
   .reviews__card::after {
@@ -1133,6 +1142,7 @@ textarea {
   background-color: #FFFFFF;
 }
 .form__checkbox .checkmark {
+  fill: #497870;
   opacity: 0;
   height: 0.4444444444rem;
   position: absolute;
@@ -1296,15 +1306,18 @@ footer .container {
   font-size: 1.1666666667rem;
 }
 
-.contacts__phone {
+footer .contacts__phone {
   font-size: 1.1666666667rem;
   color: #497870;
   margin-top: 0.3333333333rem;
 }
 @media (max-width: 480px) {
-  .contacts__phone {
+  footer .contacts__phone {
     margin-top: 0.6666666667rem;
   }
+}
+footer .contacts__phone .phone__pic {
+  fill: #497870;
 }
 
 .networks__list,
@@ -1331,25 +1344,17 @@ footer .container {
   margin: 0;
 }
 
-.networks__link {
-  max-width: 20px;
-  min-width: 20px;
-  max-height: 20px;
-  min-height: 20px;
+.networks__link,
+.networks__pic {
+  max-width: 1.1111111111rem;
+  min-width: 1.1111111111rem;
+  max-height: 1.1111111111rem;
+  min-height: 1.1111111111rem;
 }
-.networks__link.vk {
-  background-image: url("/2020-11-23-web-chocco/images/svg/networks--vk.svg");
-  background-size: contain;
+
+.networks__pic {
+  fill: #B3B3B3;
 }
-.networks__link.fb {
-  background-image: url("/2020-11-23-web-chocco/images/svg/networks--fb.svg");
-  background-size: contain;
-}
-.networks__link.in {
-  background-image: url("/2020-11-23-web-chocco/images/svg/networks--in.svg");
-  background-size: contain;
-}
-.networks__link.tv {
-  background-image: url("/2020-11-23-web-chocco/images/svg/networks--tv.svg");
-  background-size: contain;
+.networks__pic:hover {
+  fill: #292929;
 }

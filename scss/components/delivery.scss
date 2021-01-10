@@ -222,6 +222,7 @@ div .checkboxes {
     background-color: $white;
 
     .checkmark {
+        fill: $green;
         opacity: 0;
         height: rem(8px);
         position: absolute;

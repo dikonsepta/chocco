@@ -75,10 +75,13 @@
 
     &:not(:last-child)::after {
         position: absolute;
-        content: url("/2020-11-23-web-chocco/images/svg/dots.svg");
+        content: "";
         width: rem(67px);
+        height: rem(21px);
         top: 23%;
         left: 95.5%;
+        background-color: #F2F5F4;
+        mask-image: url("/2020-11-23-web-chocco/images/svg/dots.svg");
 
         @include tablet {
             display: none;
@@ -120,6 +123,7 @@
 }
 
 .benefits__pic {
+    fill: $black;
     height: rem(68px);
     width: rem(68px);
 }
