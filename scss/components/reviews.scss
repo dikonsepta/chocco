@@ -1,4 +1,5 @@
 .reviews h2 {
+    z-index: 100;
     margin-bottom: rem(32px);
 
     @include phone {

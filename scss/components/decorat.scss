@@ -94,14 +94,14 @@ section.slider {
 }
 
 section.team {
-    background: url("/2020-11-23-web-chocco/images/decorate/pattern--3.png") top -71% right no-repeat;
+    background: none;
 
     &::before {
         z-index: 100;
         position: absolute;
-        content: url("/2020-11-23-web-chocco/images/decorate/berry--3.png");
-        top: -4%;
-        right: 1.5%;
+        content: url("/2020-11-23-web-chocco/images/decorate/comp--berry4--pattern3png.png");
+        top: -29%;
+        right: 0;
     }
 
     &::after {
@@ -116,11 +116,35 @@ section.team {
         background: none;
 
         &::before {
-            display: none;
+            content: "";
+            width: rem(151.87px);
+            height: rem(351px);
+            background: url("/2020-11-23-web-chocco/images/decorate/comp--berry4--pattern3png.png") center center / contain no-repeat;
+            top: -30.5%;
         }
 
         &::after {
-            display: none;
+            content: url("/2020-11-23-web-chocco/images/decorate/berry--4.png");
+            top: 91%;
+            left: 3.5%;
+        }
+    }
+
+    @include phone {
+        background: none;
+
+        &::before {
+            background: url("/2020-11-23-web-chocco/images/decorate/comp--berry4--pattern3png.png") center center / contain no-repeat;
+            top: -27%;
+            right: -5%;
+        }
+
+        &::after {
+            z-index: 100;
+            position: absolute;
+            content: url("/2020-11-23-web-chocco/images/decorate/berry--4.png");
+            top: 94.5%;
+            left: 0.5%;
         }
     }
 
@@ -133,30 +157,22 @@ section.reviews {
     &::before {
         z-index: 100;
         position: absolute;
-        content: url("/2020-11-23-web-chocco/images/decorate/pattern--4.png");
-        top: 78%;
+        content: url("/2020-11-23-web-chocco/images/decorate/comp--berry6--pattern4.png");
+        top: 78.5%;
         left: 0;
     }
 
-    &::after {
-        z-index: 100;
-        position: absolute;
-        content: url("/2020-11-23-web-chocco/images/decorate/berry--6.png");
-        top: 85.5%;
-        left: 4%;
-    }
 
     @include tablet {
         background-position: top 2% right -4%;
 
         &::before {
-            top: 76%;
-            left: -4%;
-        }
-
-        &::after {
-            top: 82.5%;
-            left: -4%;
+            content: "";
+            width: rem(119px);
+            height: rem(282px);
+            background: url("/2020-11-23-web-chocco/images/decorate/comp--berry6--pattern4.png") center center / contain no-repeat;
+            top: 76.5%;
+            left: -3%;
         }
 
         background-color: $white;
@@ -167,13 +183,10 @@ section.reviews {
         background-position: top 2.5% right -8%;
 
         &::before {
-            top: 82.5%;
-            left: -2%;
-        }
-
-        &::after {
-            top: 88.5%;
-            left: -6.5%;
+            background: url("/2020-11-23-web-chocco/images/decorate/comp--berry6--pattern4--phone.png") center center / contain no-repeat;
+            width: rem(122px);
+            height: rem(235px);
+            top: 83%;
         }
 
         background-color: $white;
@@ -198,9 +211,4 @@ section.delivery {
     }
 
     background-color: #CFDEDB;
-}
-
-
-section.footer {
-    background-color: $white;
 }

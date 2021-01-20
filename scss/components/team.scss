@@ -1,0 +1,150 @@
+.team .container {
+    max-width: rem(1000px);
+    padding-right: rem(30px);
+    padding-left: rem(30px);
+}
+
+.team__title {
+    @include tablet {
+        margin-top: rem(10px);
+    }
+}
+
+.team__photo {
+    width: rem(220px);
+    height: rem(290px);
+    margin-bottom: rem(20px);
+
+    @each $avatar in (boris, alla, kiril, mila) {
+        &.#{$avatar} {
+            background: url("/2020-11-23-web-chocco/images/photo/team--#{$avatar}.png") center center / cover no-repeat;
+        }
+    }
+}
+
+.team__name {
+    font-weight: bold;
+    font-size: rem(21px);
+    line-height: rem(25px);
+    margin-bottom: rem(8px);
+    padding-right: rem(16px);
+    position: relative;
+
+    &::after {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        content: "";
+        width: 0;
+        height: 0;
+        transition: .3s border-top ease-in-out;
+        border-top: rem(8px) solid $deepgreen;
+        border-right: rem(4px) solid transparent;
+        border-bottom: rem(0px) solid $deepgreen;
+        border-left: rem(4px) solid transparent;
+    }
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.team__accordion {
+
+    .accordion__wrapper {
+        height: rem(0px);
+        transition: .2s ease-in-out;
+        overflow: hidden;
+        top: 100%;
+
+        .team__mission {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: flex-start;
+            align-items: center;
+
+            p {
+                margin-top: rem(4px);
+                font-weight: 300;
+                color: $gray;
+            }
+        }
+    }
+}
+
+#accordion__active {
+    .team__name::after {
+        transition: .3s border-bottom ease-in-out;
+        border-top: rem(0px) solid $deepgreen;
+        border-right: rem(4px) solid transparent;
+        border-bottom: rem(8px) solid $deepgreen;
+        border-left: rem(4px) solid transparent;
+    }
+
+    .accordion__wrapper {
+        transition: .3s ease-in-out;
+    }
+}
+
+
+
+.team__list.desktop {
+    width: 100%;
+    margin: rem(54px) 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: stretch;
+    align-items: flex-start;
+
+    .team__item {
+        flex: 1;
+        margin-right: rem(20px);
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+
+    .team__accordion {
+        position: relative;
+
+        .accordion__wrapper {
+            position: absolute;
+        }
+    }
+
+    @include tablet {
+        display: none;
+    }
+}
+
+
+
+.team__list.mobile {
+    width: rem(290px);
+    margin: rem(32px) 0 0;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    display: none;
+
+    @include tablet {
+        display: flex;
+    }
+
+    .team__item {
+        p {
+            margin-bottom: rem(32px);
+        }
+
+        &:last-child p {
+            margin-bottom: 0;
+        }
+    }
+
+    .team__name {
+        margin-bottom: rem(10px);
+    }
+}
