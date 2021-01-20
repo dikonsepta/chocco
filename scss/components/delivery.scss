@@ -205,7 +205,7 @@ div .checkboxes {
         background-color: $deepgreen;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%)
+        transform: translate(-50%, -50%);
     }
 
     .radio:checked~&::before {

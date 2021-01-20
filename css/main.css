@@ -1,5 +1,9 @@
 @import "../css/normalize.css";
 @import "https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap";
+body .none {
+  display: none;
+}
+
 * {
   font-family: "Alegreya Sans", "Roboto", sans-serif;
   font-style: normal;
@@ -41,6 +45,7 @@ body {
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   width: 0;
+  height: 0;
 }
 
 .wrapper {
@@ -52,13 +57,13 @@ body::-webkit-scrollbar {
 
 section {
   position: relative;
-  min-height: 650px;
+  min-height: 36.1111111111rem;
   height: 100vh;
 }
 
 .container {
-  max-width: 1100px;
-  padding: 0 80px;
+  max-width: 61.1111111111rem;
+  padding: 0 4.4444444444rem;
   margin: 0 auto;
   width: 100%;
   height: 100%;
@@ -69,15 +74,15 @@ section {
 }
 @media (max-width: 768px) {
   .container {
-    max-width: 768px;
-    padding: 0 30px;
+    max-width: 42.6666666667rem;
+    padding: 0 1.6666666667rem;
     margin: 0;
   }
 }
 @media (max-width: 480px) {
   .container {
-    max-width: 480px;
-    padding: 0 10px;
+    max-width: 26.6666666667rem;
+    padding: 0 0.5555555556rem;
     margin: 0;
   }
 }
@@ -187,6 +192,7 @@ h1 {
 }
 
 h2 {
+  z-index: 100;
   font-weight: bold;
   font-size: 2rem;
   line-height: 1.19;
@@ -207,26 +213,26 @@ h3 {
 }
 
 section.welcome {
-  background: url("/2020-11-23-web-chocco/images/decorate/berry-1.png") 71% 83% no-repeat, url("/2020-11-23-web-chocco/images/decorate/sheet-1.png") 71% 96% no-repeat, url("/2020-11-23-web-chocco/images/decorate/sheet-2.png") 99% 70% no-repeat, url("/2020-11-23-web-chocco/images/decorate/candybar.png") top 47% left 52vw no-repeat, url("/2020-11-23-web-chocco/images/decorate/pattern-1.png") bottom right no-repeat;
+  background: url("/2020-11-23-web-chocco/images/decorate/berry--1.png") 71% 83% no-repeat, url("/2020-11-23-web-chocco/images/decorate/sheet--1.png") 71% 96% no-repeat, url("/2020-11-23-web-chocco/images/decorate/sheet--2.png") 99% 70% no-repeat, url("/2020-11-23-web-chocco/images/decorate/candybar.png") top 47% left 52vw no-repeat, url("/2020-11-23-web-chocco/images/decorate/pattern--1.png") bottom right no-repeat;
   background-color: #61C4D9;
 }
 section.welcome::before {
   z-index: 100;
   position: absolute;
-  content: url("/2020-11-23-web-chocco/images/decorate/sheet-3.png");
+  content: url("/2020-11-23-web-chocco/images/decorate/sheet--3.png");
   top: 89.5%;
   left: 3.5%;
 }
 section.welcome::after {
   z-index: 100;
   position: absolute;
-  content: url("/2020-11-23-web-chocco/images/decorate/berry-2.png");
+  content: url("/2020-11-23-web-chocco/images/decorate/berry--2.png");
   top: 92%;
   left: 81.5%;
 }
 @media (max-width: 768px) {
   section.welcome {
-    background: url("/2020-11-23-web-chocco/images/decorate/pattern-1.png") center right no-repeat;
+    background: url("/2020-11-23-web-chocco/images/decorate/pattern--1.png") center right no-repeat;
     background-color: #61C4D9;
   }
   section.welcome::before {
@@ -238,7 +244,7 @@ section.welcome::after {
 }
 @media (max-width: 480px) {
   section.welcome {
-    background: url("/2020-11-23-web-chocco/images/decorate/pattern-1.png") right top 20%/66% no-repeat;
+    background: url("/2020-11-23-web-chocco/images/decorate/pattern--1.png") right top 20%/66% no-repeat;
     background-color: #61C4D9;
   }
   section.welcome::before {
@@ -250,8 +256,15 @@ section.welcome::after {
 }
 
 section.why {
-  background: url("/2020-11-23-web-chocco/images/decorate/pattern-2.png") center left no-repeat;
+  background: url("/2020-11-23-web-chocco/images/decorate/pattern--2.png") center left no-repeat;
   background-color: #FFFFFF;
+}
+section.why::after {
+  z-index: 100;
+  position: absolute;
+  content: url("/2020-11-23-web-chocco/images/decorate/candyberry.png");
+  top: 72%;
+  left: 0%;
 }
 @media (max-width: 768px) {
   section.why {
@@ -272,33 +285,56 @@ section.why {
     display: none;
   }
 }
-section.why::after {
-  z-index: 100;
-  position: absolute;
-  content: url("/2020-11-23-web-chocco/images/decorate/candyberry.png");
-  top: 72%;
-  left: 0%;
-}
 
 section.slider {
   background-color: #F8FAF9;
 }
 
+section.team {
+  background: url("/2020-11-23-web-chocco/images/decorate/pattern--3.png") top -71% right no-repeat;
+  background-color: #FFFFFF;
+}
+section.team::before {
+  z-index: 100;
+  position: absolute;
+  content: url("/2020-11-23-web-chocco/images/decorate/berry--3.png");
+  top: -4%;
+  right: 1.5%;
+}
+section.team::after {
+  z-index: 100;
+  position: absolute;
+  content: url("/2020-11-23-web-chocco/images/decorate/berry--4.png");
+  top: 92%;
+  left: 3%;
+}
+@media (max-width: 768px) {
+  section.team {
+    background: none;
+  }
+  section.team::before {
+    display: none;
+  }
+  section.team::after {
+    display: none;
+  }
+}
+
 section.reviews {
-  background: url("/2020-11-23-web-chocco/images/decorate/berry-5.png") top 13.5% right 2.5% no-repeat;
+  background: url("/2020-11-23-web-chocco/images/decorate/berry--5.png") top 13.5% right 2.5% no-repeat;
   background-color: #FFFFFF;
 }
 section.reviews::before {
   z-index: 100;
   position: absolute;
-  content: url("/2020-11-23-web-chocco/images/decorate/pattern-4.png");
+  content: url("/2020-11-23-web-chocco/images/decorate/pattern--4.png");
   top: 78%;
   left: 0;
 }
 section.reviews::after {
   z-index: 100;
   position: absolute;
-  content: url("/2020-11-23-web-chocco/images/decorate/berry-6.png");
+  content: url("/2020-11-23-web-chocco/images/decorate/berry--6.png");
   top: 85.5%;
   left: 4%;
 }
@@ -332,22 +368,18 @@ section.reviews::after {
 }
 
 section.delivery {
-  background: url("/2020-11-23-web-chocco/images/decorate/berry-7.png") bottom 17.5% left 5% no-repeat, url("/2020-11-23-web-chocco/images/decorate/sheet-4.png") bottom 20% right 1% no-repeat, url("/2020-11-23-web-chocco/images/decorate/raspberry-bg.png") center center/cover no-repeat;
+  background: url("/2020-11-23-web-chocco/images/decorate/berry--7.png") bottom 17.5% left 5% no-repeat, url("/2020-11-23-web-chocco/images/decorate/sheet--4.png") bottom 20% right 1% no-repeat, url("/2020-11-23-web-chocco/images/decorate/raspberry--bg.png") center center/cover no-repeat;
   background-color: #CFDEDB;
 }
 @media (max-width: 768px) {
   section.delivery {
-    background: url("/2020-11-23-web-chocco/images/decorate/raspberry-bg.png") center center/cover no-repeat;
+    background: url("/2020-11-23-web-chocco/images/decorate/raspberry--bg.png") center center/cover no-repeat;
   }
 }
 @media (max-width: 480px) {
   section.delivery {
-    background: url("/2020-11-23-web-chocco/images/decorate/raspberry-bg.png") center center/cover no-repeat;
+    background: url("/2020-11-23-web-chocco/images/decorate/raspberry--bg.png") center center/cover no-repeat;
   }
-}
-
-section.map {
-  background: url("/2020-11-23-web-chocco/images/decorate/map.png") center center/cover no-repeat;
 }
 
 section.footer {
@@ -470,7 +502,7 @@ section.footer {
     justify-content: center;
   }
   .cover__topline::before {
-    content: url("/2020-11-23-web-chocco/images/decorate/comp-tablet.png");
+    content: url("/2020-11-23-web-chocco/images/decorate/comp--tablet.png");
     margin-top: 0.5555555556rem;
   }
 }
@@ -479,7 +511,7 @@ section.footer {
     content: "";
     width: 100%;
     height: 72vw;
-    background: url("/2020-11-23-web-chocco/images/decorate/comp-phone.png") center center/contain no-repeat;
+    background: url("/2020-11-23-web-chocco/images/decorate/comp--phone.png") center center/contain no-repeat;
     margin-top: 0.5555555556rem;
   }
 }
@@ -511,7 +543,7 @@ section.footer {
 @media (max-width: 768px) {
   .cover__slogan p {
     padding: 0 21%;
-    margin-bottom: 1.2777777778rem;
+    margin-bottom: 1.3333333333rem;
   }
 }
 @media (max-width: 480px) {
@@ -536,7 +568,7 @@ section.footer {
     display: none;
   }
 }
-.cover__properties .properties__menu .properties__item {
+.cover__properties .properties__list .properties__item {
   display: inline-flex;
   flex-flow: row nowrap;
   margin-right: 2.5555555556rem;
@@ -698,7 +730,6 @@ section.footer {
 }
 
 .reviews h2 {
-  z-index: 100;
   margin-bottom: 1.7777777778rem;
 }
 @media (max-width: 480px) {
@@ -761,21 +792,21 @@ section.footer {
   }
 }
 .reviews__card .card__pic.alena {
-  background: url("/2020-11-23-web-chocco/images/photo/reviews-alena.jpg");
+  background: url("/2020-11-23-web-chocco/images/photo/reviews--alena.jpg");
   background-size: cover;
   background-position-x: 78%;
   background-position-y: 38%;
   background-size: 105%;
 }
 .reviews__card .card__pic.vadim {
-  background: url("/2020-11-23-web-chocco/images/photo/reviews-vadim.jpg");
+  background: url("/2020-11-23-web-chocco/images/photo/reviews--vadim.jpg");
   background-size: cover;
   background-position-x: 45%;
   background-position-y: 41%;
   background-size: 360%;
 }
 .reviews__card .card__pic.marina {
-  background: url("/2020-11-23-web-chocco/images/photo/reviews-marina.jpg");
+  background: url("/2020-11-23-web-chocco/images/photo/reviews--marina.jpg");
   background-size: cover;
   background-position-x: 52%;
   background-position-y: 6%;
@@ -812,7 +843,7 @@ section.footer {
 .reviews__card::after {
   position: absolute;
   content: "";
-  background: url("/2020-11-23-web-chocco/images/decorate/pattern-5.png") center center/contain no-repeat;
+  background: url("/2020-11-23-web-chocco/images/decorate/pattern--5.png") center center/contain no-repeat;
   top: 5%;
   right: 0;
   width: 7.0555555556rem;
@@ -892,21 +923,21 @@ section.footer {
   }
 }
 .reviews__item.alena {
-  background: url("/2020-11-23-web-chocco/images/photo/reviews-alena.jpg");
+  background: url("/2020-11-23-web-chocco/images/photo/reviews--alena.jpg");
   background-size: cover;
   background-position-x: 50%;
   background-position-y: 40%;
   background-size: 120%;
 }
 .reviews__item.vadim {
-  background: url("/2020-11-23-web-chocco/images/photo/reviews-vadim.jpg");
+  background: url("/2020-11-23-web-chocco/images/photo/reviews--vadim.jpg");
   background-size: cover;
   background-position-x: 45%;
   background-position-y: 42%;
   background-size: 400%;
 }
 .reviews__item.marina {
-  background: url("/2020-11-23-web-chocco/images/photo/reviews-marina.jpg");
+  background: url("/2020-11-23-web-chocco/images/photo/reviews--marina.jpg");
   background-size: cover;
   background-position-x: 50%;
   background-position-y: 15%;
@@ -1244,32 +1275,38 @@ textarea {
 }
 @media (max-width: 768px) {
   .burgermenu {
-    margin: 0 5px;
-    width: 26px;
-    display: flex;
-    flex-flow: column nowrap;
+    margin: 0 0.2777777778rem;
+    display: block;
   }
 }
 @media (max-width: 480px) {
   .burgermenu {
     margin: 0;
-    width: 26px;
-    display: flex;
-    flex-flow: column nowrap;
+    display: block;
   }
 }
 
-.burgermenu__line {
-  border-radius: 10px;
-  height: 4.2px;
-  background-color: #FFFFFF;
-  margin-bottom: 5.4px;
+.burgermenu__pic {
+  width: 1.4444444444rem;
+  height: 1.33rem;
+  fill: #FFFFFF;
 }
-.burgermenu__line:last-child {
-  margin-bottom: 0;
+
+section.contacts > .container {
+  max-width: 100%;
+  flex-flow: column nowrap;
+  padding: 0;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  background: url("/2020-11-23-web-chocco/images/decorate/map.png") center center/cover no-repeat;
 }
 
 footer {
+  background-color: #FFFFFF;
+  width: 100%;
   height: auto;
 }
 footer .container {
@@ -1357,4 +1394,443 @@ footer .contacts__phone .phone__pic {
 }
 .networks__pic:hover {
   fill: #292929;
+}
+
+.fullmenu {
+  display: none;
+}
+@media (max-width: 768px) {
+  .fullmenu {
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 480px) {
+  .fullmenu {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.fullmenu {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  background-color: #333537;
+}
+
+.fullmenu__list {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullmenu__item a {
+  white-space: nowrap;
+  font-size: 2rem;
+  line-height: 2;
+  color: #FFFFFF;
+}
+
+.fullmenu__close {
+  position: absolute;
+  top: 2.3333333333rem;
+  right: 2.3333333333rem;
+}
+
+.close__pic {
+  fill: #FFFFFF;
+  width: 1.1111111111rem;
+  height: 1.1111111111rem;
+}
+
+.slider .container {
+  position: relative;
+  padding-top: 3.3333333333rem;
+  padding-bottom: 3.3333333333rem;
+}
+@media (max-width: 768px) {
+  .slider .container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .container > .slider_arrow {
+    display: none;
+  }
+}
+
+.slider_arrow {
+  position: absolute;
+  width: 1.3333333333rem;
+  height: 2.2222222222rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+}
+@media (max-width: 768px) {
+  .slider_arrow {
+    top: 54%;
+  }
+}
+@media (max-width: 480px) {
+  .slider_arrow {
+    top: 45%;
+  }
+}
+.slider_arrow.arrow__left {
+  left: 3.0555555556rem;
+  transform: translateY(-50%) rotate(180deg);
+}
+@media (max-width: 768px) {
+  .slider_arrow.arrow__left {
+    left: -2.6666666667rem;
+  }
+}
+@media (max-width: 480px) {
+  .slider_arrow.arrow__left {
+    left: 0.4444444444rem;
+  }
+}
+.slider_arrow.arrow__right {
+  right: 3.0555555556rem;
+  transform: translateY(-50%) rotate(0deg);
+}
+@media (max-width: 768px) {
+  .slider_arrow.arrow__right {
+    right: -2.6666666667rem;
+  }
+}
+@media (max-width: 480px) {
+  .slider_arrow.arrow__right {
+    right: 0.4444444444rem;
+  }
+}
+
+.arrow__pic {
+  width: 0.8333333333rem;
+  height: 1.6111111111rem;
+  fill: #292929;
+}
+
+.slider__list,
+.slider__item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .slider__list,
+.slider__item {
+    flex-flow: column nowrap;
+  }
+}
+
+.slider__item {
+  padding: 0 1.7777777778rem 0 0.5555555556rem;
+}
+@media (max-width: 768px) {
+  .slider__item {
+    padding: 0;
+  }
+}
+@media (max-width: 480px) {
+  .slider__item {
+    margin-top: 0.6666666667rem;
+  }
+}
+
+.item__preview {
+  position: relative;
+  min-width: 54%;
+  height: 24.1111111111rem;
+  margin-right: 2.4444444444rem;
+  margin-bottom: 0.5555555556rem;
+}
+.item__preview.yellow {
+  background: url("/2020-11-23-web-chocco/images/decorate/comp--yellowbar.png") center center/contain no-repeat;
+}
+.item__preview.blue {
+  background: url("/2020-11-23-web-chocco/images/decorate/comp--bluebar.png") center center/contain no-repeat;
+}
+@media (max-width: 768px) {
+  .item__preview {
+    height: 45vw;
+    margin-right: 0;
+    margin-bottom: 0.8888888889rem;
+  }
+}
+@media (max-width: 480px) {
+  .item__preview {
+    min-width: 104%;
+    height: 64vw;
+    margin-bottom: 0;
+  }
+  .item__preview.yellow {
+    background: url("/2020-11-23-web-chocco/images/decorate/comp--yellowbar--phone.png") center center/contain no-repeat;
+  }
+  .item__preview.blue {
+    background: url("/2020-11-23-web-chocco/images/decorate/comp--bluebar--phone.png") center center/contain no-repeat;
+  }
+}
+.item__preview .slider_arrow {
+  display: none;
+}
+@media (max-width: 768px) {
+  .item__preview .slider_arrow {
+    display: flex;
+  }
+}
+
+.item__product {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 3.7777777778rem;
+}
+@media (max-width: 768px) {
+  .item__product {
+    align-items: center;
+    margin-top: -0.5555555556rem;
+    margin-bottom: 2.5555555556rem;
+  }
+}
+
+.product__title {
+  margin: 1.3333333333rem 0;
+}
+@media (max-width: 768px) {
+  .product__title {
+    text-align: center;
+    font-size: 1.6666666667rem;
+    margin: 0.8888888889rem 0;
+  }
+}
+@media (max-width: 480px) {
+  .product__title {
+    width: 84%;
+    line-height: 1.21;
+    margin: 0.6666666667rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .product__description {
+    display: flex;
+    justify-content: center;
+  }
+}
+.product__description p {
+  color: #666666;
+  margin-bottom: 1.3333333333rem;
+}
+@media (max-width: 768px) {
+  .product__description p {
+    text-align: center;
+    width: 72%;
+  }
+}
+@media (max-width: 480px) {
+  .product__description p {
+    width: 84%;
+  }
+}
+
+.product__property {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1.3333333333rem;
+}
+@media (max-width: 768px) {
+  .product__property {
+    margin-left: -2.2222222222rem;
+  }
+}
+
+.property__tag {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin-right: 2.4444444444rem;
+}
+.property__tag:last-child {
+  margin-right: 0;
+}
+
+.tag__name {
+  color: #666666;
+}
+
+.tag__value {
+  color: #292929;
+  font-weight: bold;
+}
+
+.product__price {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .product__price {
+    justify-content: center;
+  }
+}
+
+.price__value {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 1.7777777778rem;
+}
+.price__value p {
+  font-weight: 300;
+  font-size: 3.3333333333rem;
+  line-height: 1;
+  margin-right: 0.6666666667rem;
+  color: #292929;
+}
+
+.price__pic {
+  width: 1.2333333333rem;
+  height: 1.6555555556rem;
+  fill: #292929;
+}
+
+.dropdown:hover {
+  width: 100%;
+}
+
+.dropdown:hover .dropdown__structure {
+  width: 100%;
+}
+
+.dropdown:hover .structure__list {
+  opacity: 1;
+  right: 0;
+  transition: 0.3s opacity ease-in-out;
+}
+
+.dropdown:hover .dropdown__button {
+  background-color: #60AACC;
+}
+
+.dropdown {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .dropdown {
+    display: none;
+  }
+}
+
+.dropdown__button {
+  z-index: 300;
+  min-width: 5.0555555556rem;
+  min-height: 5.0555555556rem;
+  max-width: 5.0555555556rem;
+  max-height: 5.0555555556rem;
+  border-radius: 0.2222222222rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background: #86C3D7;
+  transition: 0.3s ease-in-out;
+}
+
+.dropdown__pic {
+  width: 2.5555555556rem;
+  height: 2.5555555556rem;
+  fill: #FFFFFF;
+}
+
+.dropdown__text {
+  margin-top: 0.2222222222rem;
+  font-weight: bold;
+  font-size: 0.7777777778rem;
+  color: #FFFFFF;
+}
+
+.dropdown__structure {
+  position: relative;
+  width: 0%;
+}
+
+.structure__list {
+  width: 100%;
+  z-index: 200;
+  position: absolute;
+  overflow: hidden;
+  padding: 0.7777777778rem 1.1111111111rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0.2222222222rem 0.2222222222rem 2.2222222222rem rgba(0, 0, 0, 0.06);
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  border-radius: 0.2222222222rem;
+  overflow: visible;
+  opacity: 0;
+  right: -555.5rem;
+  transition: 0.3s opacity ease-in-out;
+}
+.structure__list::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 5.0555555556rem;
+  top: 0;
+  left: 0;
+  margin-left: -5.0555555556rem;
+}
+
+.structure__item {
+  width: 100%;
+  padding: 0.7777777778rem 0.6666666667rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.structure__pic {
+  width: 1.3333333333rem;
+  height: 1.3333333333rem;
+  fill: #292929;
+  margin-right: 1rem;
+}
+
+.structure__name {
+  flex: 1;
+  font-weight: 500;
+  font-size: 0.8888888889rem;
+  line-height: 1.5;
+}
+
+.structure__vaule {
+  white-space: nowrap;
+  margin-right: auto;
+  margin-left: 0.6666666667rem;
+  font-weight: normal;
+  font-size: 0.8888888889rem;
+  line-height: 1.5;
 }

@@ -1,12 +1,24 @@
 @function rem($px) {
-    @return $px / $f + 0rem;
+    @return $px / $f+0rem;
 }
+
+// @mixin desktab {
+//     @media (min-width: ($tablet -1px)) and (max-width: ($desktop +1px)) {
+//         @content;
+//     }
+// }
 
 @mixin tablet {
     @media (max-width: $tablet) {
         @content;
     }
 }
+
+// @mixin tabpho {
+//     @media (min-width: ($phone -1px)) and (max-width: ($tablet +1px)) {
+//         @content;
+//     }
+// }
 
 @mixin phone {
     @media (max-width: $phone) {

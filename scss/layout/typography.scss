@@ -27,6 +27,7 @@ h1 {
 }
 
 h2 {
+    z-index: 100;
     @include h2;
 }
 
@@ -67,7 +68,7 @@ h3 {
 
 @mixin regular {
     font-weight: normal;
-    font-size: 16;
+    font-size: rem(16px);
     line-height: 1.5;
 }
 
