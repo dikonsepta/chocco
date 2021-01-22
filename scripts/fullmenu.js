@@ -1,30 +1,31 @@
-const body = document.body;
-const openBut = document.querySelector(".fullmenu__open");
-const menu = document.querySelector(".fullmenu");
-const closeBut = document.querySelector(".fullmenu__close");
+$(document).ready(function () {
+    let body = $("body");
+    let menu = $(".fullmenu");
+    let openBut = $(".fullmenu__open");
+    let closeBut = $(".fullmenu__close");
 
-openBut.addEventListener("click", (event) => {
-    event.preventDefault();
-    body.style.overflowY = "hidden";
-    menu.style.display = "flex";
-});
-
-for (let links of menu.querySelectorAll("a")) {
-    links.addEventListener("click", () => {
-        body.style.overflowY = "visible";
-        menu.style.display = "none";
+    openBut.on("click", event => {
+        event.preventDefault();
+        body.css("overflowY", "hidden");
+        menu.fadeIn(300);
     });
-}
 
-closeBut.addEventListener("click", (event) => {
-    event.preventDefault();
-    body.style.overflowY = "visible";
-    menu.style.display = "none";
-});
+    menu.find("a").each((i, links) => {
+        $(links).on("click", event => {
+            body.css("overflowY", "visible");
+            menu.fadeOut(200);
+        });
+    });
 
-document.addEventListener("DOMContentLoaded", () => {
-    window.onresize = () => {
-        body.style.overflowY = "visible";
-        menu.style.display = "none";
-    };
+    closeBut.on("click", event => {
+        event.preventDefault();
+        body.css("overflowY", "visible");
+        menu.fadeOut(200);
+
+    });
+
+    $(window).resize(() => {
+        body.css("overflowY", "visible");
+        menu.fadeOut(0);
+    });
 });

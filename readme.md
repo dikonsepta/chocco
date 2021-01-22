@@ -6,11 +6,11 @@
 
 ---
 
-- [X] ДЗ __первой__ недели
-- [X] ДЗ __второй__ недели
-- [X] ДЗ __третьей__ недели
-- [ ] ДЗ __четвертой__ недели
-- [ ] ДЗ __пятой__ недели
+- [X] ДЗ [__первой__](https://tasks.loftschool.com/middle/one.html) недели
+- [X] ДЗ [__второй__](https://tasks.loftschool.com/middle/two.html) недели
+- [X] ДЗ [__третьей__](https://tasks.loftschool.com/middle/three.html) недели
+- [ ] ДЗ [__четвертой__](https://tasks.loftschool.com/middle/four.html) недели
+- [ ] ДЗ [__пятой__](https://tasks.loftschool.com/middle/five.html) недели
 
 ---
 
@@ -27,4 +27,5 @@ git push
 ```bash
 git reset --soft < хэш коммита, к которому хотим вернуться >
 git push --force
+git reset
 ```

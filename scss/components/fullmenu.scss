@@ -25,6 +25,10 @@
 }
 
 .fullmenu__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -39,6 +43,8 @@
 }
 
 .fullmenu__close {
+    width: rem(20px);
+    height: rem(20px);
     position: absolute;
     top: rem(42px);
     right: rem(42px);

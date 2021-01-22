@@ -9,13 +9,8 @@
     }
 }
 
-.container>.slider_arrow {
-    @include tablet {
-        display: none;
-    }
-}
-
 .slider_arrow {
+    z-index: 100;
     position: absolute;
     width: rem(24px);
     height: rem(40px);
@@ -25,36 +20,36 @@
     top: 50%;
 
     @include tablet {
-        top: 54%;
+        top: 31%;
     }
 
     @include phone {
-        top: 45%;
+        top: 27%;
     }
 
     &.arrow__left {
-        left: rem(55px);
+        left: 5%;
         transform: translateY(-50%) rotate(180deg);
 
         @include tablet {
-            left: rem(-48px);
+            left: 19%;
         }
 
         @include phone {
-            left: rem(8px);
+            left: 2%;
         }
     }
 
     &.arrow__right {
-        right: rem(55px);
+        right: 5%;
         transform: translateY(-50%) rotate(0deg);
 
         @include tablet {
-            right: rem(-48px);
+            right: 19%;
         }
 
         @include phone {
-            right: rem(8px);
+            right: 2%;
         }
     }
 }
@@ -65,11 +60,43 @@
     fill: $black;
 }
 
+.slider__list {
+    overflow: hidden;
+    display: flex;
+    position: relative;
+
+    .slider__item {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: none;
+        transform: translate(-50%, -50%);
+        transition: .3s ease-in-out;
+
+        &#n-1 {
+            z-index: -1;
+            left: -80%;
+            display: flex;
+        }
+
+        &#n0 {
+            z-index: 1;
+            left: 50%;
+            display: flex;
+        }
+
+        &#n1 {
+            z-index: -1;
+            left: 180%;
+            display: flex;
+        }
+    }
+}
+
 .slider__list,
 .slider__item {
     width: 100%;
     height: 100%;
-    display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
@@ -121,14 +148,6 @@
         min-width: 104%;
         height: 64vw;
         margin-bottom: 0;
-    }
-
-    .slider_arrow {
-        display: none;
-
-        @include tablet {
-            display: flex;
-        }
     }
 }
 
@@ -248,9 +267,3 @@
     height: rem(29.8px);
     fill: $black;
 }
-
-// .price__value,
-// .price__pic,
-// .price__button {
-//     margin-bottom: rem(12px);
-// }

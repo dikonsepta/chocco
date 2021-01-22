@@ -352,7 +352,7 @@ section.reviews::before {
   position: absolute;
   content: url("/2020-11-23-web-chocco/images/decorate/comp--berry6--pattern4.png");
   top: 78.5%;
-  left: 0;
+  left: -1.4444444444rem;
 }
 @media (max-width: 768px) {
   section.reviews {
@@ -365,7 +365,6 @@ section.reviews::before {
     height: 15.6666666667rem;
     background: url("/2020-11-23-web-chocco/images/decorate/comp--berry6--pattern4.png") center center/contain no-repeat;
     top: 76.5%;
-    left: -3%;
   }
 }
 @media (max-width: 480px) {
@@ -1434,6 +1433,10 @@ footer .contacts__phone .phone__pic {
 }
 
 .fullmenu__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -1448,6 +1451,8 @@ footer .contacts__phone .phone__pic {
 }
 
 .fullmenu__close {
+  width: 1.1111111111rem;
+  height: 1.1111111111rem;
   position: absolute;
   top: 2.3333333333rem;
   right: 2.3333333333rem;
@@ -1471,13 +1476,8 @@ footer .contacts__phone .phone__pic {
   }
 }
 
-@media (max-width: 768px) {
-  .container > .slider_arrow {
-    display: none;
-  }
-}
-
 .slider_arrow {
+  z-index: 100;
   position: absolute;
   width: 1.3333333333rem;
   height: 2.2222222222rem;
@@ -1488,40 +1488,40 @@ footer .contacts__phone .phone__pic {
 }
 @media (max-width: 768px) {
   .slider_arrow {
-    top: 54%;
+    top: 31%;
   }
 }
 @media (max-width: 480px) {
   .slider_arrow {
-    top: 45%;
+    top: 27%;
   }
 }
 .slider_arrow.arrow__left {
-  left: 3.0555555556rem;
+  left: 5%;
   transform: translateY(-50%) rotate(180deg);
 }
 @media (max-width: 768px) {
   .slider_arrow.arrow__left {
-    left: -2.6666666667rem;
+    left: 19%;
   }
 }
 @media (max-width: 480px) {
   .slider_arrow.arrow__left {
-    left: 0.4444444444rem;
+    left: 2%;
   }
 }
 .slider_arrow.arrow__right {
-  right: 3.0555555556rem;
+  right: 5%;
   transform: translateY(-50%) rotate(0deg);
 }
 @media (max-width: 768px) {
   .slider_arrow.arrow__right {
-    right: -2.6666666667rem;
+    right: 19%;
   }
 }
 @media (max-width: 480px) {
   .slider_arrow.arrow__right {
-    right: 0.4444444444rem;
+    right: 2%;
   }
 }
 
@@ -1531,11 +1531,39 @@ footer .contacts__phone .phone__pic {
   fill: #292929;
 }
 
+.slider__list {
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
+.slider__list .slider__item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease-in-out;
+}
+.slider__list .slider__item#n-1 {
+  z-index: -1;
+  left: -80%;
+  display: flex;
+}
+.slider__list .slider__item#n0 {
+  z-index: 1;
+  left: 50%;
+  display: flex;
+}
+.slider__list .slider__item#n1 {
+  z-index: -1;
+  left: 180%;
+  display: flex;
+}
+
 .slider__list,
 .slider__item {
   width: 100%;
   height: 100%;
-  display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
@@ -1592,14 +1620,6 @@ footer .contacts__phone .phone__pic {
   }
   .item__preview.blue {
     background: url("/2020-11-23-web-chocco/images/decorate/comp--bluebar--phone.png") center center/contain no-repeat;
-  }
-}
-.item__preview .slider_arrow {
-  display: none;
-}
-@media (max-width: 768px) {
-  .item__preview .slider_arrow {
-    display: flex;
   }
 }
 
@@ -1859,7 +1879,6 @@ footer .contacts__phone .phone__pic {
 }
 
 .team__photo {
-  width: 12.2222222222rem;
   height: 16.1111111111rem;
   margin-bottom: 1.1111111111rem;
 }
@@ -1946,6 +1965,9 @@ footer .contacts__phone .phone__pic {
 .team__list.desktop .team__item:last-child {
   margin-right: 0;
 }
+.team__list.desktop .team__photo {
+  max-width: 12.2222222222rem;
+}
 .team__list.desktop .team__accordion {
   position: relative;
 }
@@ -1974,8 +1996,8 @@ footer .contacts__phone .phone__pic {
 .team__list.mobile .team__item p {
   margin-bottom: 1.7777777778rem;
 }
-.team__list.mobile .team__item:last-child p {
-  margin-bottom: 0;
+.team__list.mobile .team__photo {
+  width: 12.2222222222rem;
 }
 .team__list.mobile .team__name {
   margin-bottom: 0.5555555556rem;

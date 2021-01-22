@@ -159,7 +159,7 @@ section.reviews {
         position: absolute;
         content: url("/2020-11-23-web-chocco/images/decorate/comp--berry6--pattern4.png");
         top: 78.5%;
-        left: 0;
+        left: rem(-26px);
     }
 
 
@@ -172,7 +172,6 @@ section.reviews {
             height: rem(282px);
             background: url("/2020-11-23-web-chocco/images/decorate/comp--berry6--pattern4.png") center center / contain no-repeat;
             top: 76.5%;
-            left: -3%;
         }
 
         background-color: $white;
