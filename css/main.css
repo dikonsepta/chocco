@@ -1,9 +1,5 @@
 @import "../css/normalize.css";
 @import "https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap";
-body .none {
-  display: none;
-}
-
 * {
   font-family: "Alegreya Sans", "Roboto", sans-serif;
   font-style: normal;
@@ -341,6 +337,10 @@ section.team::after {
     top: 94.5%;
     left: 0.5%;
   }
+}
+
+section.menu {
+  background: url("/2020-11-23-web-chocco/images/decorate/accord--bg.png") center center/cover no-repeat;
 }
 
 section.reviews {
@@ -2001,4 +2001,166 @@ footer .contacts__phone .phone__pic {
 }
 .team__list.mobile .team__name {
   margin-bottom: 0.5555555556rem;
+}
+
+.menu .container {
+  min-width: 100%;
+  padding: 0;
+  margin: 0;
+  flex-flow: row nowrap;
+}
+
+.menu__title {
+  font-weight: bold;
+  font-size: 2.6666666667rem;
+  line-height: 1.21;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  height: 100%;
+  margin-top: 32vh;
+  margin-right: 42px;
+  margin-left: 85px;
+}
+@media (max-width: 480px) {
+  .menu__title {
+    font-size: 2.2222222222rem;
+    line-height: 0.9;
+  }
+}
+@media (max-width: 768px) {
+  .menu__title {
+    position: absolute;
+    margin-top: 24vh;
+    margin-left: 40px;
+  }
+}
+@media (max-width: 480px) {
+  .menu__title {
+    margin-top: 24vh;
+    margin-left: 10px;
+  }
+}
+
+.menu__accordion {
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  overflow: hidden;
+  margin-left: auto;
+  justify-content: flex-end;
+}
+
+.menu__accord {
+  transition: 0.3s ease-in-out;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+
+.accord__name {
+  max-width: 102px;
+  min-width: 9.3vw;
+  height: 100%;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .accord__name {
+    max-width: 102px;
+    width: 102px;
+    min-width: 102px;
+  }
+}
+@media (max-width: 480px) {
+  .accord__name {
+    max-width: 90px;
+    width: 90px;
+    min-width: 90px;
+  }
+}
+.accord__name.one {
+  background: url("/2020-11-23-web-chocco/images/decorate/accord--one.png");
+  background-size: cover;
+}
+.accord__name.two {
+  background: url("/2020-11-23-web-chocco/images/decorate/accord--two.png");
+  background-size: cover;
+}
+.accord__name.three {
+  background: url("/2020-11-23-web-chocco/images/decorate/accord--three.png");
+  background-size: cover;
+}
+.accord__name span {
+  font-weight: bold;
+  font-size: 2.6666666667rem;
+  line-height: 1.21;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  white-space: nowrap;
+  text-transform: none;
+  position: absolute;
+  writing-mode: tb-rl;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+}
+@media (max-width: 480px) {
+  .accord__name span {
+    font-size: 2.2222222222rem;
+    line-height: 0.9;
+  }
+}
+
+.accord__value {
+  height: 100%;
+  background: rgba(51, 53, 55, 0.9);
+  width: 0px;
+  max-width: 524px;
+  transition: 0.3s ease-in-out;
+}
+@media (max-width: 480px) {
+  .accord__value {
+    background: rgba(51, 53, 55, 0.9);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+  }
+}
+.accord__value p {
+  font-weight: normal;
+  font-size: 0.8888888889rem;
+  line-height: 1.5;
+  color: #FFFFFF;
+  margin-top: 30px;
+  margin-right: 80px;
+  margin-left: 40px;
+  opacity: 0;
+  transition: 0.1s ease-in-out;
+}
+@media (max-width: 768px) {
+  .accord__value p {
+    margin-top: 38px;
+    margin-right: 54px;
+    margin-left: 38px;
+  }
+}
+@media (max-width: 480px) {
+  .accord__value p {
+    margin-top: 40px;
+    margin-right: 35px;
+    margin-left: 40px;
+  }
+}
+
+.accordion__open .accord__value {
+  width: 100%;
+}
+@media (max-width: 480px) {
+  .accordion__open {
+    z-index: 200;
+    position: absolute;
+  }
+}
+.accordion__open p {
+  opacity: 1;
 }
