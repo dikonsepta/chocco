@@ -185,7 +185,7 @@
     border-radius: 50%;
     margin-right: rem(6px);
     border: rem(4px) solid #F8FAF9;
-    transition: .3s ease-in-out;
+    transition: .2s ease-in-out;
 
     @include phone {
         width: rem(64px);
@@ -220,6 +220,7 @@
     &.reviews__active,
     &.reviews__item:hover {
         border: rem(4px) solid $deepgreen;
+        transition: .1s ease-in-out;
     }
 }
 

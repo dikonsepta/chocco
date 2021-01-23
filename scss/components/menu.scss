@@ -3,12 +3,16 @@
     padding: 0;
     margin: 0;
     flex-flow: row nowrap;
+
+    * {
+        height: 100%;
+        overflow: hidden;
+    }
 }
 
 .menu__title {
     @include h1;
     color: $white;
-    height: 100%;
     margin-top: 32vh;
     margin-right: rem(42px);
     margin-left: rem(85px);
@@ -20,13 +24,11 @@
     }
 
     @include phone {
-        margin-top: 24vh;
         margin-left: rem(10px);
     }
 }
 
 .menu__accordion {
-    height: 100%;
     display: flex;
     flex-flow: row nowrap;
     overflow: hidden;
@@ -35,30 +37,25 @@
 }
 
 .menu__accord {
-    transition: .3s ease-in-out;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
-    height: 100%;
 }
 
 .accord__name {
     max-width: rem(102px);
     min-width: 9.3vw;
-    height: 100%;
     position: relative;
 
     @include tablet {
         max-width: rem(102px);
-        width: rem(102px);
-        min-width: rem(102px);
+        min-width: 13.3vw;
     }
 
     @include phone {
         max-width: rem(90px);
-        width: rem(90px);
-        min-width: rem(90px);
+        min-width: 18.7vw;
     }
 
     @each $bg in (one, two, three) {
@@ -82,31 +79,33 @@
 }
 
 .accord__value {
-    height: 100%;
-    background: rgba(51, 53, 55, 0.9);
     width: rem(0px);
-    max-width: rem(524px);
     transition: .3s ease-in-out;
+    max-width: rem(524px);
+    background: rgba(51, 53, 55, 0.9);
+
+    @include tablet {
+        max-width: none;
+    }
 
     @include phone {
-        background: rgba(51, 53, 55, 0.9);
+        max-width: none;
         backdrop-filter: blur(10px);
     }
 
     p {
         @include regular;
         color: $white;
+        opacity: 0;
+        transition: .1s ease-in-out;
         margin-top: rem(30px);
         margin-right: rem(80px);
         margin-left: rem(40px);
-        opacity: 0;
-        transition: .1s ease-in-out;
 
         @include tablet {
             margin-top: rem(38px);
             margin-right: rem(54px);
             margin-left: rem(38px);
-
         }
 
         @include phone {
@@ -118,17 +117,15 @@
 }
 
 .accordion__open {
-    .accord__value {
-        width: 100%;
-    }
 
     @include phone {
         z-index: 200;
         position: absolute;
+        right: 0;
     }
 
     p {
         opacity: 1;
-        transition: .1s ease-in-out;
+        transition: .2s ease-in-out;
     }
 }

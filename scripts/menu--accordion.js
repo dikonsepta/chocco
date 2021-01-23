@@ -1,12 +1,36 @@
 $(document).ready(function () {
-
+    let screenW = $("body").width();
+    let itemW = $(".accord__name").width();
     const firstActive = $(".accordion__open");
-    const firstWrapper = firstActive.find(".accord__value");
-    const firstVisible = firstWrapper.find("p").outerWidth(true);
-    const firstVisibleMin = firstWrapper.find("p").width();
+    const firstWrapper = $(".accordion__open").find(".accord__value");
 
-    $(".menu__accordion").css("max-width", $("body").width());
-    $(".accord__value p").css("min-width", String(firstVisibleMin) + "px");
+
+    function OPEN() {
+        if ($("body").width() <= 768) {
+            if ($("body").width() <= 480) {
+                return String(screenW - itemW) + "px";
+            } else {
+                return String(screenW - itemW * 3) + "px";
+            }
+        } else {
+            let title = $(".menu__title").outerWidth(true);
+            if (screenW - itemW * 3 - title > 524) {
+                return "524px";
+            } else {
+                return String(screenW - itemW * 3 - title) + "px";
+            }
+        }
+    }
+
+
+    function TEXT() {
+        let textAll = $(".accord__value>p");
+        let minus = parseInt(textAll.css("margin-left"), 10) + parseInt(textAll.css("margin-right"), 10);
+        textAll.css("min-width", String(parseInt(OPEN(), 10) - minus) + "px");
+    }
+
+    TEXT();
+
 
     if ($("body").width() <= 768) {
         firstActive.removeClass("accordion__open");
@@ -16,8 +40,11 @@ $(document).ready(function () {
             $(".menu>.container").find(".menu__title").fadeOut(0);
         }
     } else {
-        firstWrapper.width(String(firstVisible) + "px");
+        firstWrapper.width(OPEN());
+        $(".menu>.container").find(".menu__title").fadeIn(300);
     }
+
+
 
     $("a.accord__name").each((i, button) => {
         $(button).on("click", event => {
@@ -36,7 +63,9 @@ $(document).ready(function () {
                     wrapperNo.width("0px");
                 });
                 clickYes.addClass("accordion__open");
-                wrapperYes.width(String(firstVisible) + "px");
+                wrapperYes.width(OPEN());
+
+                TEXT();
             }
 
             if ($("body").width() <= 768) {
@@ -49,13 +78,13 @@ $(document).ready(function () {
         });
     });
 
+
+
     $(window).resize(() => {
-        let firstActive = $(".accordion__open");
-        let firstWrapper = firstActive.find(".accord__value");
-        firstWrapper.css("width", "auto");
-        let firstVisible = firstWrapper.find("p").outerWidth(true);
-        let firstVisibleMin = firstWrapper.find("p").width();
-        firstWrapper.width(String(firstVisible) + "px");
+        screenW = $("body").width();
+        itemW = $(".accord__name").width();
+
+        TEXT();
 
         if ($("body").width() <= 768) {
             if ($(".menu__accordion").find(".accordion__open").length == 0) {
@@ -67,6 +96,6 @@ $(document).ready(function () {
             $(".menu>.container").find(".menu__title").fadeIn(300);
         }
 
-        $(".accord__value p").css("min-width", String(firstVisibleMin) + "px");
+        $(".accordion__open .accord__value").width(OPEN());
     });
 });
