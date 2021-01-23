@@ -543,29 +543,62 @@
         <section class="reviews template" id="reviews">
             <div class="container">
                 <h2 class="reviews__title">Отзывы</h2>
-                <div class="reviews__card">
-                    <div class="card__pic alena"></div>
-                    <div class="card__info">
-                        <h3 class="card__title">Лучший перекус</h3>
-                        <div class="card__description">
-                            <p>
-                                Я&nbsp;ем&nbsp;малыми порциями, но&nbsp;часто. Это повышает мою продуктивность
-                                в&nbsp;разы. В&nbsp;течение дня сижу за&nbsp;омпьютером и&nbsp;часто отходить
-                                в&nbsp;кафе или на&nbsp;кухню просто не&nbsp;могу себе позволить. А&nbsp;батончик –
-                                он&nbsp;всегда под рукой. Это приятно и&nbsp;удобно.
-                            </p>
+                <ul class="reviews__card">
+                    <li class="card__item visible" data-card="alena">
+                        <div class="card__pic alena"></div>
+                        <div class="card__info">
+                            <h3 class="card__title">Лучший перекус</h3>
+                            <div class="card__description">
+                                <p>
+                                    Я&nbsp;ем&nbsp;малыми порциями, но&nbsp;часто. Это повышает мою продуктивность
+                                    в&nbsp;разы. В&nbsp;течение дня сижу за&nbsp;омпьютером и&nbsp;часто отходить
+                                    в&nbsp;кафе или на&nbsp;кухню просто не&nbsp;могу себе позволить. А&nbsp;батончик –
+                                    он&nbsp;всегда под рукой. Это приятно и&nbsp;удобно.
+                                </p>
+                            </div>
+                            <div class="card__autor">Алёна Хмельницкая</div>
                         </div>
-                        <div class="card__autor">Алёна Хмельницкая</div>
-                    </div>
-                </div>
+                    </li>
+                    <li class="card__item" data-card="vadim">
+                        <div class="card__pic vadim"></div>
+                        <div class="card__info">
+                            <h3 class="card__title">Идеально подходят для спортсменов</h3>
+                            <div class="card__description">
+                                <p>
+                                    После тренировок всегда хочется быстро закинуться чем-то белковым, потому что
+                                    до&nbsp;дома ещё нужно доехать. А&nbsp;ушать хочется. Протеиновые батончики всегда
+                                    выручают в&nbsp;этом плане. Спасибо производителю за&nbsp;этот качественный
+                                    и&nbsp;экологичный продукт.
+                                </p>
+                            </div>
+                            <div class="card__autor">Вадим Грачев</div>
+                        </div>
+                    </li>
+                    <li class="card__item" data-card="marina">
+                        <div class="card__pic marina"></div>
+                        <div class="card__info">
+                            <h3 class="card__title">Лучшие батончики премиум уровня</h3>
+                            <div class="card__description">
+                                <p>
+                                    Батончики понравились. На&nbsp;мой взгляд слегка завышена цена по&nbsp;сравнению
+                                    с&nbsp;конкурентами, однако, как говорится&nbsp;–&nbsp;оно того стоит. Нравится
+                                    носить с&nbsp;собой, нравится держать в&nbsp;руке. Ну&nbsp;и&nbsp;конечно
+                                    же,&nbsp;кушать. Идеально утоляют голод, хоть и&nbsp;не&nbsp;надолго. Через час уже
+                                    ем&nbsp;ещё один. Но&nbsp;это скорее плюс, чем минус.
+                                </p>
+                            </div>
+                            <div class="card__autor">Марина Орлова</div>
+                        </div>
+                    </li>
+                </ul>
                 <ul class="reviews__list">
-                    <li class="reviews__item reviews__item--active alena">
+                    <li class="reviews__item reviews__active alena" data-circle="alena">
                         <a href="" class="reviews__link"></a>
                     </li>
-                    <li class="reviews__item vadim">
+                    <li class="reviews__item vadim" data-circle="vadim">
                         <a href="" class="reviews__link"></a>
                     </li>
-                    <li class="reviews__item marina">
+                    <li class="reviews__item marina" data-circle="marina">
                         <a href="" class="reviews__link"></a>
                     </li>
                 </ul>
@@ -772,6 +805,7 @@
     <script src="/2020-11-23-web-chocco/scripts/team--accordion.js"></script>
     <script src="/2020-11-23-web-chocco/scripts/slider.js"></script>
     <script src="/2020-11-23-web-chocco/scripts/menu--accordion.js"></script>
+    <script src="/2020-11-23-web-chocco/scripts/slideshow.js"></script>
 
 </body>
 

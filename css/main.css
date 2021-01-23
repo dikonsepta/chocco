@@ -764,25 +764,30 @@ section.delivery {
 .reviews__card {
   width: 100%;
   position: relative;
-  display: flex;
+  background-color: #F8FAF9;
+  min-height: 17.7777777778rem;
+}
+.reviews__card .card__item {
+  padding: 2.3333333333rem;
+  display: none;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  background-color: #F8FAF9;
-  padding: 2.3333333333rem;
-  flex-flow: row nowrap;
 }
 @media (max-width: 768px) {
-  .reviews__card {
+  .reviews__card .card__item {
     padding: 3.1111111111rem 1.4444444444rem 2.5555555556rem;
     flex-flow: column nowrap;
   }
 }
 @media (max-width: 480px) {
-  .reviews__card {
+  .reviews__card .card__item {
     padding: 3.1111111111rem 1.4444444444rem 1.4444444444rem;
     flex-flow: column nowrap;
   }
+}
+.reviews__card .visible {
+  display: flex;
 }
 .reviews__card .card__pic {
   width: 14.0555555556rem;
@@ -839,6 +844,8 @@ section.delivery {
   border-radius: 50%;
   background-color: #FFFFFF;
   top: -3.5rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 @media (max-width: 768px) {
   .reviews__card::before {
@@ -924,7 +931,8 @@ section.delivery {
   height: 4.1111111111rem;
   border-radius: 50%;
   margin-right: 0.3333333333rem;
-  border: 0.2222222222rem solid transparent;
+  border: 0.2222222222rem solid #F8FAF9;
+  transition: 0.3s ease-in-out;
 }
 @media (max-width: 480px) {
   .reviews__item {
@@ -953,7 +961,7 @@ section.delivery {
   background-position-y: 15%;
   background-size: 300%;
 }
-.reviews__item.reviews__item--active, .reviews__item.reviews__item:hover {
+.reviews__item.reviews__active, .reviews__item.reviews__item:hover {
   border: 0.2222222222rem solid #365A49;
 }
 
@@ -2018,8 +2026,8 @@ footer .contacts__phone .phone__pic {
   color: #FFFFFF;
   height: 100%;
   margin-top: 32vh;
-  margin-right: 42px;
-  margin-left: 85px;
+  margin-right: 2.3333333333rem;
+  margin-left: 4.7222222222rem;
 }
 @media (max-width: 480px) {
   .menu__title {
@@ -2031,13 +2039,13 @@ footer .contacts__phone .phone__pic {
   .menu__title {
     position: absolute;
     margin-top: 24vh;
-    margin-left: 40px;
+    margin-left: 2.2222222222rem;
   }
 }
 @media (max-width: 480px) {
   .menu__title {
     margin-top: 24vh;
-    margin-left: 10px;
+    margin-left: 0.5555555556rem;
   }
 }
 
@@ -2060,23 +2068,23 @@ footer .contacts__phone .phone__pic {
 }
 
 .accord__name {
-  max-width: 102px;
+  max-width: 5.6666666667rem;
   min-width: 9.3vw;
   height: 100%;
   position: relative;
 }
 @media (max-width: 768px) {
   .accord__name {
-    max-width: 102px;
-    width: 102px;
-    min-width: 102px;
+    max-width: 5.6666666667rem;
+    width: 5.6666666667rem;
+    min-width: 5.6666666667rem;
   }
 }
 @media (max-width: 480px) {
   .accord__name {
-    max-width: 90px;
-    width: 90px;
-    min-width: 90px;
+    max-width: 5rem;
+    width: 5rem;
+    min-width: 5rem;
   }
 }
 .accord__name.one {
@@ -2101,7 +2109,7 @@ footer .contacts__phone .phone__pic {
   text-transform: none;
   position: absolute;
   writing-mode: tb-rl;
-  bottom: 40px;
+  bottom: 2.2222222222rem;
   left: 50%;
   transform: translateX(-50%) rotate(180deg);
 }
@@ -2115,8 +2123,8 @@ footer .contacts__phone .phone__pic {
 .accord__value {
   height: 100%;
   background: rgba(51, 53, 55, 0.9);
-  width: 0px;
-  max-width: 524px;
+  width: 0rem;
+  max-width: 29.1111111111rem;
   transition: 0.3s ease-in-out;
 }
 @media (max-width: 480px) {
@@ -2131,24 +2139,24 @@ footer .contacts__phone .phone__pic {
   font-size: 0.8888888889rem;
   line-height: 1.5;
   color: #FFFFFF;
-  margin-top: 30px;
-  margin-right: 80px;
-  margin-left: 40px;
+  margin-top: 1.6666666667rem;
+  margin-right: 4.4444444444rem;
+  margin-left: 2.2222222222rem;
   opacity: 0;
   transition: 0.1s ease-in-out;
 }
 @media (max-width: 768px) {
   .accord__value p {
-    margin-top: 38px;
-    margin-right: 54px;
-    margin-left: 38px;
+    margin-top: 2.1111111111rem;
+    margin-right: 3rem;
+    margin-left: 2.1111111111rem;
   }
 }
 @media (max-width: 480px) {
   .accord__value p {
-    margin-top: 40px;
-    margin-right: 35px;
-    margin-left: 40px;
+    margin-top: 2.2222222222rem;
+    margin-right: 1.9444444444rem;
+    margin-left: 2.2222222222rem;
   }
 }
 
@@ -2163,4 +2171,5 @@ footer .contacts__phone .phone__pic {
 }
 .accordion__open p {
   opacity: 1;
+  transition: 0.1s ease-in-out;
 }

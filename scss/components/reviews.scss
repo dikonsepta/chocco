@@ -20,23 +20,31 @@
 .reviews__card {
     width: 100%;
     position: relative;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
     background-color: #F8FAF9;
-    padding: rem(42px);
-    flex-flow: row nowrap;
+    min-height: rem(320px);
 
-    @include tablet {
-        padding: rem(56px) rem(26px) rem(46px);
-        flex-flow: column nowrap;
+    .card__item {
+        padding: rem(42px);
+        display: none;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+
+        @include tablet {
+            padding: rem(56px) rem(26px) rem(46px);
+            flex-flow: column nowrap;
+        }
+
+        @include phone {
+            padding: rem(56px) rem(26px) rem(26px);
+            flex-flow: column nowrap;
+        }
     }
 
-    @include phone {
-        padding: rem(56px) rem(26px) rem(26px);
-        flex-flow: column nowrap;
+    .visible {
+        display: flex;
     }
+
 
     .card__pic {
         width: rem(253px);
@@ -97,6 +105,8 @@
         border-radius: 50%;
         background-color: $white;
         top: rem(-63px);
+        left: 50%;
+        transform: translateX(-50%);
 
         @include tablet {
             top: rem(-48px);
@@ -174,7 +184,8 @@
     height: rem(74px);
     border-radius: 50%;
     margin-right: rem(6px);
-    border: rem(4px) solid transparent;
+    border: rem(4px) solid #F8FAF9;
+    transition: .3s ease-in-out;
 
     @include phone {
         width: rem(64px);
@@ -206,7 +217,7 @@
         }
     }
 
-    &.reviews__item--active,
+    &.reviews__active,
     &.reviews__item:hover {
         border: rem(4px) solid $deepgreen;
     }
