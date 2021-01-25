@@ -137,6 +137,12 @@ textarea {
         border: rem(3px) solid #DEE2BD;
     }
 
+
+    // &:invalid,
+    &.input--error {
+        border: rem(3px) solid #D96161; //E2BDBD
+    }
+
     @include tablet {
         font-size: rem(14px);
         line-height: 1.43;
@@ -245,22 +251,22 @@ div .checkboxes {
     }
 }
 
-.textarea__desktop {
-    textarea {
-        height: 100%;
-    }
+// .textarea__desktop {
+//     textarea {
+//         height: 100%;
+//     }
 
-    display: block;
+//     display: block;
 
-    @include tablet {
-        display: none;
-    }
-}
+//     @include tablet {
+//         display: none;
+//     }
+// }
 
-.textarea__mobil {
-    display: none;
+// .textarea__mobil {
+//     display: none;
 
-    @include tablet {
-        display: block;
-    }
-}
+//     @include tablet {
+//         display: block;
+//     }
+// }

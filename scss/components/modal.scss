@@ -1,0 +1,28 @@
+.modal {
+    z-index: 500;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    background-color: #333537;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__content {
+    background-color: $white;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 37px 70px;
+}
+
+.modal__message {
+    @include large--semibold;
+    color: $black;
+    margin-bottom: 18px;
+}

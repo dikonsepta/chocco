@@ -489,7 +489,7 @@
                 <ul class="menu__accordion">
                     <li class="menu__accord accordion__open">
                         <a href="" class="accord__name one">
-                            <span>Батночики с молоком</span>
+                            <span>Батончики с молоком</span>
                         </a>
                         <div class="accord__value">
                             <p>
@@ -607,7 +607,7 @@
 
         <section class="video template" id="video">
             <div class="container">
-                
+
             </div>
         </section>
 
@@ -616,33 +616,35 @@
             <div class="container">
                 <div class="container__form--center">
                     <h2 class="delivery__title">Закажите доставку</h2>
-                    <form class="delivery__form">
+                    <form class="delivery__form" id="form">
+                        <input type="hidden" class="form__input" name="email" value="my@mail.ru" autocomplete="off">
                         <div class="form__rowwrap parent__col">
                             <div class="form__col">
                                 <div class="form__rowwrap">
                                     <div class="form__row">
                                         <label class="label__input">
                                             <p>Имя</p>
-                                            <input type="text" class="form__input">
+                                            <input type="text" class="form__input" name="name" autocomplete="off">
                                         </label>
-                                        <label class="label__input">
+                                        <label class=" label__input">
                                             <p>Телефон</p>
-                                            <input type="tel" class="form__input">
+                                            <input type="tel" class="form__input" name="phone" autocomplete="off">
                                         </label>
                                     </div>
                                     <div class="form__row">
                                         <label class="label__input">
                                             <p>Улица</p>
-                                            <input type="text" class="form__input">
+                                            <input type="text" class="form__input" name="st" autocomplete="off">
                                         </label>
                                     </div>
                                 </div>
                             </div>
                             <div class="form__col">
-                                <div class="form__rowwrap h100">
-                                    <label class="label__textarea textarea__desktop">
+                                <div class="form__rowwrap h100" id="comment--desktop">
+                                    <label class="label__textarea">
                                         <p>Комментарий</p>
-                                        <textarea class="form__textarea" type="text"></textarea>
+                                        <textarea class="form__textarea" type="text" name="comment"
+                                            autocomplete="off"></textarea>
                                     </label>
                                 </div>
                             </div>
@@ -652,43 +654,38 @@
                                 <div class="form__row">
                                     <label class="label__input">
                                         <p>Дом</p>
-                                        <input type="text" class="form__input">
+                                        <input type="text" class="form__input" name="h" autocomplete="off">
                                     </label>
                                     <label class="label__input">
                                         <p>Корпус</p>
-                                        <input type="text" class="form__input">
+                                        <input type="text" class="form__input" name="c" autocomplete="off">
                                     </label>
                                     <label class="label__input">
                                         <p>Квартира</p>
-                                        <input type="text" class="form__input">
+                                        <input type="text" class="form__input" name="a" autocomplete="off">
                                     </label>
                                     <label class="label__input">
                                         <p>Этаж</p>
-                                        <input type="text" class="form__input">
+                                        <input type="text" class="form__input" name="f" autocomplete="off">
                                     </label>
                                 </div>
-                                <div class="form__row">
-                                    <label class="label__textarea textarea__mobil">
-                                        <p>Комментарий</p>
-                                        <textarea class="form__textarea" type="text"></textarea>
-                                    </label>
-                                </div>
+                                <div class="form__row" id="comment--mobile"></div>
                             </div>
                             <div class="form__col">
                                 <div class="form__rowwrap checkboxes">
                                     <label class="label__radio">
-                                        <input class="radio" type="radio" name="radio">
+                                        <input class="radio" type="radio" name="radio" value="cash">
                                         <div class="form__radio"></div></input>
                                         <p>Потребуется сдача</p>
                                     </label>
                                     <label class="label__radio">
-                                        <input class="radio" type="radio" name="radio" checked>
+                                        <input class="radio" type="radio" name="radio" value="card" checked>
                                         <div class="form__radio"></div></input>
                                         <p>Оплата картой</p>
                                     </label>
                                     <label class="label__checkbox">
                                         <div class="form__checkbox">
-                                            <input class="checkbox" type="checkbox" checked>
+                                            <input class="checkbox" type="checkbox" name="call" checked>
                                             <svg class="checkmark">
                                                 <use xlink:href="/2020-11-23-web-chocco/images/sprite.svg#checkmark">
                                                 </use>
@@ -698,7 +695,7 @@
                                     </label>
                                 </div>
                                 <div class="form__row buttons">
-                                    <button type="submit" class="button--green">Заказать</button>
+                                    <button type="submit" class="button--green" id="send">Заказать</button>
                                     <button type="reset" class="button--link">Очистить</button>
                                 </div>
                             </div>
@@ -800,12 +797,26 @@
     </nav>
 
 
+    <div class="modal--container"></div>
+
+
+    <script type="html/template" id="modal--template">
+        <div class="modal">
+            <div class="modal__content">
+                <span class="modal__message">Cообщение отправлено</span>
+                <button class="modal__button button--green">Заказать</button>
+            </div>
+        </div>
+    </script>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/2020-11-23-web-chocco/scripts/fullmenu.js"></script>
     <script src="/2020-11-23-web-chocco/scripts/team--accordion.js"></script>
     <script src="/2020-11-23-web-chocco/scripts/slider.js"></script>
     <script src="/2020-11-23-web-chocco/scripts/menu--accordion.js"></script>
     <script src="/2020-11-23-web-chocco/scripts/slideshow.js"></script>
+    <script src="/2020-11-23-web-chocco/scripts/delivery--form.js"></script>
 
 </body>
 

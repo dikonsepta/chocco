@@ -1110,6 +1110,10 @@ textarea {
 .label__textarea textarea:focus {
   border: 0.1666666667rem solid #DEE2BD;
 }
+.label__input input.input--error,
+.label__textarea textarea.input--error {
+  border: 0.1666666667rem solid #D96161;
+}
 @media (max-width: 768px) {
   .label__input input,
 .label__textarea textarea {
@@ -1218,29 +1222,8 @@ textarea {
   }
 }
 
-.textarea__desktop {
-  display: block;
-}
-.textarea__desktop textarea {
-  height: 100%;
-}
-@media (max-width: 768px) {
-  .textarea__desktop {
-    display: none;
-  }
-}
-
-.textarea__mobil {
-  display: none;
-}
-@media (max-width: 768px) {
-  .textarea__mobil {
-    display: block;
-  }
-}
-
 .fixedmenu {
-  z-index: 500;
+  z-index: 400;
   position: fixed;
   right: 2.3333333333rem;
   padding-bottom: 2.3333333333rem;
@@ -2175,4 +2158,35 @@ footer .contacts__phone .phone__pic {
 .accordion__open p {
   opacity: 1;
   transition: 0.2s ease-in-out;
+}
+
+.modal {
+  z-index: 500;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  background-color: #333537;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__content {
+  background-color: #FFFFFF;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 37px 70px;
+}
+
+.modal__message {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.33;
+  color: #292929;
+  margin-bottom: 18px;
 }
