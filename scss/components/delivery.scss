@@ -15,11 +15,11 @@
 
 @include tablet {
     .container__form--center {
-        padding: 0 rem(120px);
+        padding: 0 15vw; //rem(120px)
     }
 }
 
-@include tablet {
+@include phone {
     .container__form--center {
         padding: 0;
     }

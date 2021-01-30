@@ -41,6 +41,10 @@
     flex-flow: row nowrap;
     justify-content: flex-end;
     align-items: center;
+
+    @include tablet {
+        z-index: 200;
+    }
 }
 
 .accord__name {
@@ -119,7 +123,7 @@
 .accordion__open {
 
     @include phone {
-        z-index: 200;
+        z-index: 300;
         position: absolute;
         right: 0;
     }

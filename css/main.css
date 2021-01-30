@@ -47,8 +47,14 @@ body::-webkit-scrollbar {
 .wrapper {
   position: relative;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   overflow: hidden;
+}
+
+.wrapper__content {
+  height: 100%;
+  transition: 1s transform;
+  will-change: transform;
 }
 
 section {
@@ -268,7 +274,7 @@ section.why::after {
     background-color: #FFFFFF;
   }
   section.why::after {
-    top: 68%;
+    top: 82%;
     left: 0%;
   }
 }
@@ -331,7 +337,6 @@ section.team::after {
     right: -5%;
   }
   section.team::after {
-    z-index: 100;
     position: absolute;
     content: url("/2020-11-23-web-chocco/images/decorate/berry--4.png");
     top: 94.5%;
@@ -1066,10 +1071,10 @@ section.delivery {
 
 @media (max-width: 768px) {
   .container__form--center {
-    padding: 0 6.6666666667rem;
+    padding: 0 15vw;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .container__form--center {
     padding: 0;
   }
@@ -1299,7 +1304,7 @@ textarea {
 .fixedmenu {
   z-index: 400;
   position: fixed;
-  right: 2.3333333333rem;
+  right: 1.6666666667rem;
   padding-bottom: 2.3333333333rem;
   top: 50%;
   transform: translateY(-50%);
@@ -1314,32 +1319,41 @@ textarea {
     display: none;
   }
 }
+.fixedmenu * {
+  transition: 0.5s background-color ease-in-out;
+  transition: 0.5s border-color ease-in-out;
+}
 
 .fixedmenu__list {
   display: flex;
   flex-flow: column nowrap;
 }
+.fixedmenu__list.theme--white a::before {
+  background-color: #FFFFFF;
+  box-shadow: 0rem 0rem 0.6666666667rem 0.2222222222rem #61C4D9;
+}
+.fixedmenu__list.theme--white .fixed__active a,
+.fixedmenu__list.theme--white .fixedmenu__item:hover a {
+  border: 0.0555555556rem solid #FFFFFF;
+  box-shadow: 0rem 0rem 0.4444444444rem 0.2222222222rem #61C4D9;
+}
+.fixedmenu__list.theme--black a::before {
+  background-color: #FFFFFF;
+  box-shadow: 0rem 0rem 0.6666666667rem 0.2222222222rem #61C4D9;
+}
+.fixedmenu__list.theme--black .fixed__active a,
+.fixedmenu__list.theme--black .fixedmenu__item:hover a {
+  border: 0.0555555556rem solid #FFFFFF;
+  box-shadow: 0rem 0rem 0.4444444444rem 0.2222222222rem #61C4D9;
+}
 
 .fixedmenu__item {
-  width: 0.8888888889rem;
-  height: 0.8888888889rem;
-  margin: 0.1388888889rem;
-  position: relative;
-}
-.fixedmenu__item::before {
-  content: "";
-  width: 0.3333333333rem;
-  height: 0.3333333333rem;
+  cursor: pointer;
+  width: 1.1666666667rem;
+  height: 1.1666666667rem;
+  padding: 0.1388888889rem;
   border-radius: 50%;
-  background-color: #FFFFFF;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.fixedmenu__active .fixedmenu__link {
-  border: 0.0555555556rem solid #FFFFFF;
+  position: relative;
 }
 
 .fixedmenu__link {
@@ -1348,6 +1362,16 @@ textarea {
   border-radius: 50%;
   background-color: transparent;
   border: 0.0555555556rem solid transparent;
+}
+.fixedmenu__link::before {
+  content: "";
+  width: 0.3333333333rem;
+  height: 0.3333333333rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .burgermenu {
@@ -2127,6 +2151,11 @@ footer .contacts__phone .phone__pic {
   justify-content: flex-end;
   align-items: center;
 }
+@media (max-width: 768px) {
+  .menu__accord {
+    z-index: 200;
+  }
+}
 
 .accord__name {
   max-width: 5.6666666667rem;
@@ -2224,7 +2253,7 @@ footer .contacts__phone .phone__pic {
 
 @media (max-width: 480px) {
   .accordion__open {
-    z-index: 200;
+    z-index: 300;
     position: absolute;
     right: 0;
   }

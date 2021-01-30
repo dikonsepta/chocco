@@ -68,7 +68,7 @@ section.why {
         background-position: top 10% left;
 
         &::after {
-            top: 68%;
+            top: 82%;
             left: 0%;
         }
 
@@ -140,7 +140,6 @@ section.team {
         }
 
         &::after {
-            z-index: 100;
             position: absolute;
             content: url("/2020-11-23-web-chocco/images/decorate/berry--4.png");
             top: 94.5%;
