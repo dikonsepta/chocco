@@ -9,7 +9,7 @@
 - [X] ДЗ [__первой__](https://tasks.loftschool.com/middle/one.html) недели
 - [X] ДЗ [__второй__](https://tasks.loftschool.com/middle/two.html) недели
 - [X] ДЗ [__третьей__](https://tasks.loftschool.com/middle/three.html) недели
-- [ ] ДЗ [__четвертой__](https://tasks.loftschool.com/middle/four.html) недели
+- [X] ДЗ [__четвертой__](https://tasks.loftschool.com/middle/four.html) недели
 - [ ] ДЗ [__пятой__](https://tasks.loftschool.com/middle/five.html) недели
 
 ---

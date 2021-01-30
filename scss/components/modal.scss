@@ -18,11 +18,11 @@
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    padding: 37px 70px;
+    padding: rem(37px) rem(70px);
 }
 
 .modal__message {
     @include large--semibold;
     color: $black;
-    margin-bottom: 18px;
+    margin-bottom: rem(18px);
 }

@@ -97,7 +97,7 @@ section.team {
     background: none;
 
     &::before {
-        z-index: 100;
+        z-index: 0;
         position: absolute;
         content: url("/2020-11-23-web-chocco/images/decorate/comp--berry4--pattern3png.png");
         top: -29%;
@@ -196,6 +196,42 @@ section.reviews {
     }
 
     background-color: $white;
+}
+
+section.video {
+    .video__player {
+        position: relative;
+
+        &::before {
+            z-index: 100;
+            position: absolute;
+            content: "";
+            width: rem(72px);
+            height: rem(135px);
+            background:
+                url("/2020-11-23-web-chocco/images/decorate/sheet--3.png") center center / contain no-repeat;
+            top: 76.5%;
+            left: -18.5%;
+        }
+
+        &::after {
+            z-index: 100;
+            position: absolute;
+            content: url("/2020-11-23-web-chocco/images/decorate/sheet--5.png");
+            top: -17.5%;
+            right: -17.5%;
+        }
+    }
+
+    &::after {
+        z-index: 100;
+        position: absolute;
+        content: url("/2020-11-23-web-chocco/images/decorate/berry--8.png");
+        top: 78.5%;
+        right: 0;
+    }
+
+    background-color: #F8FAF9;
 }
 
 
