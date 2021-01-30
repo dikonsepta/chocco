@@ -403,12 +403,59 @@ section.video .video__player::after {
   top: -17.5%;
   right: -17.5%;
 }
+@media (max-width: 768px) {
+  section.video .video__player::before {
+    width: 3.4372222222rem;
+    height: 6.4444444444rem;
+    background: url("/2020-11-23-web-chocco/images/decorate/sheet--3.png") center center/contain no-repeat;
+    top: 47.5%;
+    left: -17.5%;
+  }
+  section.video .video__player::after {
+    content: "";
+    width: 4.0911111111rem;
+    height: 3.5rem;
+    background: url("/2020-11-23-web-chocco/images/decorate/sheet--5.png") center center/contain no-repeat;
+    top: -13.5%;
+    right: -8.5%;
+  }
+}
+@media (max-width: 480px) {
+  section.video .video__player::before {
+    width: 3.4372222222rem;
+    height: 6.4444444444rem;
+    background: url("/2020-11-23-web-chocco/images/decorate/sheet--3.png") center center/contain no-repeat;
+    top: 74.5%;
+    left: -14.5%;
+  }
+  section.video .video__player::after {
+    width: 3.3333333333rem;
+    height: 2.8333333333rem;
+    background: url("/2020-11-23-web-chocco/images/decorate/sheet--5.png") center center/contain no-repeat;
+    top: -17.5%;
+    right: -9.5%;
+  }
+}
 section.video::after {
   z-index: 100;
   position: absolute;
   content: url("/2020-11-23-web-chocco/images/decorate/berry--8.png");
   top: 78.5%;
   right: 0;
+}
+@media (max-width: 768px) {
+  section.video::after {
+    width: 6.0633333333rem;
+    height: 8.1666666667rem;
+    content: "";
+    background: url("/2020-11-23-web-chocco/images/decorate/berry--8.png") center center/contain no-repeat;
+    top: 89.5%;
+  }
+}
+@media (max-width: 480px) {
+  section.video::after {
+    right: -2%;
+  }
 }
 
 section.delivery {
@@ -1291,7 +1338,7 @@ textarea {
   transform: translate(-50%, -50%);
 }
 
-.fixedmenu__item--active .fixedmenu__link {
+.fixedmenu__active .fixedmenu__link {
   border: 0.0555555556rem solid #FFFFFF;
 }
 
@@ -2225,8 +2272,26 @@ footer .contacts__phone .phone__pic {
   align-items: center;
   margin-top: 1.7777777778rem;
   margin-bottom: 2.7777777778rem;
-  min-width: 36.7777777778rem;
-  min-height: 21.7777777778rem;
+  width: 100%;
+  height: 60vw;
+  max-width: 36.7777777778rem;
+  max-height: 21.7777777778rem;
+}
+@media (max-width: 768px) {
+  .video__player {
+    margin-top: 2.2222222222rem;
+    margin-bottom: 1.1111111111rem;
+    max-width: 33rem;
+    max-height: 19.5555555556rem;
+  }
+}
+@media (max-width: 480px) {
+  .video__player {
+    margin-top: 2.2222222222rem;
+    margin-bottom: -1.1111111111rem;
+    max-width: 21.8888888889rem;
+    max-height: 12.8888888889rem;
+  }
 }
 
 .player__wrapper {
@@ -2265,6 +2330,12 @@ footer .contacts__phone .phone__pic {
   animation-fill-mode: forwards;
   opacity: 0.7;
   transition: 0.1s opacity ease-in-out;
+}
+@media (max-width: 480px) {
+  .player__splash .splash__play {
+    width: 2.5rem;
+    height: 3.6111111111rem;
+  }
 }
 
 .player__splash:hover .splash__play {
@@ -2322,11 +2393,22 @@ footer .contacts__phone .phone__pic {
   width: 100%;
   height: 1.8888888889rem;
   background-color: #404040;
-  padding: 0 1.3333333333rem 0 0.9444444444rem;
+  padding: 0 1.3333333333rem 0 1.1111111111rem;
+}
+@media (max-width: 480px) {
+  .player__controls {
+    height: 1.3333333333rem;
+    padding: 0 0.7777777778rem 0 0.5555555556rem;
+  }
 }
 .player__controls .controls__button {
   margin-right: 1.6666666667rem;
   cursor: pointer;
+}
+@media (max-width: 480px) {
+  .player__controls .controls__button {
+    margin-right: 0.8888888889rem;
+  }
 }
 .player__controls .controls__pause {
   display: none;
@@ -2342,6 +2424,11 @@ footer .contacts__phone .phone__pic {
   border-radius: 0.0555555556rem;
   background-color: #626262;
 }
+@media (max-width: 480px) {
+  .player__controls .controls__pause .pause__line {
+    width: 0.1111111111rem;
+  }
+}
 .player__controls .controls__play {
   display: block;
   max-width: 0.6111111111rem;
@@ -2350,9 +2437,22 @@ footer .contacts__phone .phone__pic {
   height: 0.8888888889rem;
   fill: #626262;
 }
+@media (max-width: 480px) {
+  .player__controls .controls__play {
+    max-width: 0.3888888889rem;
+    width: 0.3888888889rem;
+    min-width: 0.3888888889rem;
+    height: 0.5555555556rem;
+  }
+}
 .player__controls .controls__slider {
   margin-right: 1.6666666667rem;
   width: 16.6666666667rem;
+}
+@media (max-width: 480px) {
+  .player__controls .controls__slider {
+    margin-right: 1.3333333333rem;
+  }
 }
 .player__controls .controls__slider .slider__track {
   cursor: pointer;
@@ -2361,6 +2461,11 @@ footer .contacts__phone .phone__pic {
   height: 0.2222222222rem;
   border-radius: 0.0555555556rem;
   background-color: #626262;
+}
+@media (max-width: 480px) {
+  .player__controls .controls__slider .slider__track {
+    height: 0.1111111111rem;
+  }
 }
 .player__controls .controls__slider .slider__track .slider__dot {
   left: 0%;
@@ -2372,6 +2477,11 @@ footer .contacts__phone .phone__pic {
   font-weight: normal;
   font-size: 0.8888888889rem;
   line-height: 1.5;
+}
+@media (max-width: 480px) {
+  .player__controls .controls__duration {
+    display: none;
+  }
 }
 .player__controls .controls__duration * {
   white-space: nowrap;
@@ -2395,6 +2505,12 @@ footer .contacts__phone .phone__pic {
   background-color: #626262;
   cursor: pointer;
 }
+@media (max-width: 480px) {
+  .player__controls .controls__sound .sound__track {
+    width: 2.4444444444rem;
+    height: 0.1111111111rem;
+  }
+}
 .player__controls .controls__sound .sound__track .sound__dot {
   left: 100%;
 }
@@ -2405,6 +2521,11 @@ footer .contacts__phone .phone__pic {
   display: flex;
   align-items: center;
   position: relative;
+}
+@media (max-width: 480px) {
+  .player__controls .controls__sound .sound__volume--wrapper {
+    margin-right: 0.7222222222rem;
+  }
 }
 .player__controls .controls__sound .sound__volume--wrapper.off::after {
   content: "";
@@ -2418,10 +2539,21 @@ footer .contacts__phone .phone__pic {
   background-color: #626262;
   border: 0.1111111111rem solid #404040;
 }
+@media (max-width: 480px) {
+  .player__controls .controls__sound .sound__volume--wrapper.off::after {
+    height: 0.7777777778rem;
+  }
+}
 .player__controls .controls__sound .sound__volume {
   fill: #626262;
-  width: 0.7222222222rem;
+  width: 0.8888888889rem;
   height: 0.8888888889rem;
+}
+@media (max-width: 480px) {
+  .player__controls .controls__sound .sound__volume {
+    width: 0.5555555556rem;
+    height: 0.5555555556rem;
+  }
 }
 .player__controls .dot {
   position: absolute;
@@ -2432,6 +2564,12 @@ footer .contacts__phone .phone__pic {
   border-radius: 50%;
   background-color: #626262;
   cursor: pointer;
+}
+@media (max-width: 480px) {
+  .player__controls .dot {
+    width: 0.3888888889rem;
+    height: 0.3888888889rem;
+  }
 }
 
 .video__player.active .player__splash {
@@ -2449,4 +2587,12 @@ footer .contacts__phone .phone__pic {
   width: 0.6111111111rem;
   min-width: 0.6111111111rem;
   height: 0.8888888889rem;
+}
+@media (max-width: 480px) {
+  .video__player.active .controls__pause {
+    max-width: 0.3888888889rem;
+    width: 0.3888888889rem;
+    min-width: 0.3888888889rem;
+    height: 0.5555555556rem;
+  }
 }

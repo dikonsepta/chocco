@@ -208,8 +208,7 @@ section.video {
             content: "";
             width: rem(72px);
             height: rem(135px);
-            background:
-                url("/2020-11-23-web-chocco/images/decorate/sheet--3.png") center center / contain no-repeat;
+            background: url("/2020-11-23-web-chocco/images/decorate/sheet--3.png") center center / contain no-repeat;
             top: 76.5%;
             left: -18.5%;
         }
@@ -221,6 +220,43 @@ section.video {
             top: -17.5%;
             right: -17.5%;
         }
+
+        @include tablet {
+            &::before {
+                width: rem(61.87px);
+                height: rem(116px);
+                background: url("/2020-11-23-web-chocco/images/decorate/sheet--3.png") center center / contain no-repeat;
+                top: 47.5%;
+                left: -17.5%;
+            }
+
+            &::after {
+                content: "";
+                width: rem(73.64px);
+                height: rem(63px);
+                background: url("/2020-11-23-web-chocco/images/decorate/sheet--5.png") center center / contain no-repeat;
+                top: -13.5%;
+                right: -8.5%;
+            }
+        }
+
+        @include phone {
+            &::before {
+                width: rem(61.87px);
+                height: rem(116px);
+                background: url("/2020-11-23-web-chocco/images/decorate/sheet--3.png") center center / contain no-repeat;
+                top: 74.5%;
+                left: -14.5%;
+            }
+
+            &::after {
+                width: rem(60px);
+                height: rem(51px);
+                background: url("/2020-11-23-web-chocco/images/decorate/sheet--5.png") center center / contain no-repeat;
+                top: -17.5%;
+                right: -9.5%;
+            }
+        }
     }
 
     &::after {
@@ -229,6 +265,22 @@ section.video {
         content: url("/2020-11-23-web-chocco/images/decorate/berry--8.png");
         top: 78.5%;
         right: 0;
+    }
+
+    @include tablet {
+        &::after {
+            width: rem(109.14px);
+            height: rem(147px);
+            content: "";
+            background: url("/2020-11-23-web-chocco/images/decorate/berry--8.png") center center / contain no-repeat;
+            top: 89.5%;
+        }
+    }
+
+    @include phone {
+        &::after {
+            right: -2%;
+        }
     }
 
     background-color: #F8FAF9;
