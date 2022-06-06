@@ -27,6 +27,7 @@ h1 {
 }
 
 h2 {
+    z-index: 200;
     @include h2;
 }
 

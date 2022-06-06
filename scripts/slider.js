@@ -1,4 +1,4 @@
-$(document).ready(function () {
+(function () {
     let contain = $("section.slider .container");
     let mySlider = $("ul.slider__list");
     let slides = $("li.slider__item");
@@ -16,7 +16,7 @@ $(document).ready(function () {
         slides.css("height", String(contain.height()));
     });
 
-    
+
     slides.each((i, li) => {
         $(li).attr("id", "n" + String(i));
     });
@@ -69,4 +69,4 @@ $(document).ready(function () {
             }
         });
     });
-});
+})();

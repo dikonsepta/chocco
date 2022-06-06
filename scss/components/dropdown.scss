@@ -69,7 +69,8 @@
     align-items: flex-start;
     background: rgba(255, 255, 255, 0.8);
     box-shadow: rem(4px) rem(4px) rem(40px) rgba(0, 0, 0, 0.06);
-    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+            backdrop-filter: blur(40px);
     border-radius: rem(4px);
     overflow: visible;
 

@@ -64,7 +64,7 @@
 
     @each $bg in (one, two, three) {
         &.#{$bg} {
-            background: url("/2020-11-23-web-chocco/images/decorate/accord--#{$bg}.png");
+            background: url("/chocco/images/decorate/accord--#{$bg}.png");
             background-size: cover;
         }
     }
@@ -75,7 +75,9 @@
         white-space: nowrap;
         text-transform: none;
         position: absolute;
-        writing-mode: tb-rl;
+        -webkit-writing-mode: tb-rl;
+            -ms-writing-mode: tb-rl;
+                writing-mode: tb-rl;
         bottom: rem(40px);
         left: 50%;
         transform: translateX(-50%) rotate(180deg);
@@ -94,7 +96,8 @@
 
     @include phone {
         max-width: none;
-        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(10px);
     }
 
     p {

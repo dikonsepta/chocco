@@ -1,4 +1,4 @@
-$(document).ready(function () {
+(function () {
     let screenW = $("body").width();
     let itemW = $(".accord__name").width();
     const firstActive = $(".accordion__open");
@@ -98,4 +98,4 @@ $(document).ready(function () {
 
         $(".accordion__open .accord__value").width(OPEN());
     });
-});
+})();

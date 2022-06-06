@@ -1,4 +1,4 @@
-$(document).ready(function () {
+(function () {
     let body = $("body");
     let menu = $(".fullmenu");
     let openBut = $(".fullmenu__open");
@@ -28,4 +28,4 @@ $(document).ready(function () {
         body.css("overflowY", "visible");
         menu.fadeOut(0);
     });
-});
+})();

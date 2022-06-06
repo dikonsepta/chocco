@@ -2,6 +2,7 @@
     color: $green;
 
     .delivery__title {
+        text-align: center;
         white-space: nowrap;
         color: $deepgreen;
         margin-bottom: rem(46px);
@@ -13,31 +14,31 @@
     }
 }
 
-@include tablet {
-    .container__form--center {
-        padding: 0 15vw; //rem(120px)
+form {
+    @include tablet {
+        padding: 0 17%;
     }
-}
 
-@include phone {
-    .container__form--center {
+    @include phone {
         padding: 0;
     }
-}
 
-
-form {
     * {
         width: 100%;
     }
 
     margin-bottom: rem(16px);
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     text-align: left;
 
     .parent__col {
-        column-count: 2;
-        column-gap: rem(36px);
+        -moz-column-count: 2;
+             column-count: 2;
+        -moz-column-gap: rem(36px);
+             column-gap: rem(36px);
         margin-bottom: rem(38px);
 
         &:last-child {
@@ -45,8 +46,10 @@ form {
         }
 
         @include tablet {
-            column-count: 1;
-            column-gap: 0;
+            -moz-column-count: 1;
+                 column-count: 1;
+            -moz-column-gap: 0;
+                 column-gap: 0;
         }
     }
 

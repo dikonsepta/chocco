@@ -36,7 +36,7 @@
         }
 
         @include phone {
-            padding: rem(56px) rem(26px) rem(26px);
+            padding: rem(36px) rem(16px) rem(16px);
             flex-flow: column nowrap;
         }
     }
@@ -63,7 +63,7 @@
 
         @each $avatar in (alena, vadim, marina) {
             &.#{$avatar} {
-                background: url("/2020-11-23-web-chocco/images/photo/reviews--#{$avatar}.jpg");
+                background: url("/chocco/images/photo/reviews--#{$avatar}.jpg");
                 background-size: cover;
 
                 @if #{$avatar}=="alena" {
@@ -120,7 +120,7 @@
     &::after {
         position: absolute;
         content: "";
-        background: url("/2020-11-23-web-chocco/images/decorate/pattern--5.png") center center / contain no-repeat;
+        background: url("/chocco/images/decorate/pattern--5.png") center center / contain no-repeat;
         top: 5%;
         right: 0;
         width: rem(127px);
@@ -194,7 +194,7 @@
 
     @each $avatar in (alena, vadim, marina) {
         &.#{$avatar} {
-            background: url("/2020-11-23-web-chocco/images/photo/reviews--#{$avatar}.jpg");
+            background: url("/chocco/images/photo/reviews--#{$avatar}.jpg");
             background-size: cover;
 
             @if #{$avatar}=="alena" {

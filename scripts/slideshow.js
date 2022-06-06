@@ -1,4 +1,4 @@
-$(document).ready(function () {
+(function () {
     let cards = $(".reviews__card").children();
     let icons = $(".reviews__list").children();
 
@@ -20,4 +20,4 @@ $(document).ready(function () {
             $(ico).addClass("reviews__active").siblings().removeClass("reviews__active");
         });
     });
-});
+})();

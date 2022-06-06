@@ -14,9 +14,14 @@
     height: rem(290px);
     margin-bottom: rem(20px);
 
+    @include phone {
+        max-height: rem(290px);
+        height: rem(220px);
+    }
+
     @each $avatar in (boris, alla, kiril, mila) {
         &.#{$avatar} {
-            background: url("/2020-11-23-web-chocco/images/photo/team--#{$avatar}.png") center center / cover no-repeat;
+            background: url("/chocco/images/photo/team--#{$avatar}.png") center center / cover no-repeat;
         }
     }
 }

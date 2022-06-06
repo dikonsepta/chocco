@@ -1,4 +1,4 @@
-$(document).ready(function () {
+(function () {
     function SWAP() {
         var left = $("#comment--mobile > *");
         var right = $("#comment--desktop > *");
@@ -6,9 +6,11 @@ $(document).ready(function () {
         $("#comment--desktop").append(left);
     }
 
-    if ($("body").width() <= 768 && $("#comment--mobile").html().trim() == "") { SWAP(); }
-    else if ($("body").width() > 768 && $("#comment--desktop").html().trim() == "") { SWAP(); }
-
+    if ($("body").width() <= 768 && $("#comment--mobile").html().trim() == "") {
+        SWAP();
+    } else if ($("body").width() > 768 && $("#comment--desktop").html().trim() == "") {
+        SWAP();
+    }
 
 
     const myForm = $("#form")[0];
@@ -84,7 +86,10 @@ $(document).ready(function () {
 
 
     $(window).resize(() => {
-        if ($("body").width() <= 768 && $("#comment--mobile").html().trim() == "") { SWAP(); }
-        else if ($("body").width() > 768 && $("#comment--desktop").html().trim() == "") { SWAP(); }
+        if ($("body").width() <= 768 && $("#comment--mobile").html().trim() == "") {
+            SWAP();
+        } else if ($("body").width() > 768 && $("#comment--desktop").html().trim() == "") {
+            SWAP();
+        }
     });
-});
+})();

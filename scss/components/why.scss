@@ -81,7 +81,8 @@
         top: 23%;
         left: 95.5%;
         background-color: #F2F5F4;
-        mask-image: url("/2020-11-23-web-chocco/images/svg/dots.svg");
+        -webkit-mask-image: url("/chocco/images/svg/dots.svg");
+                mask-image: url("/chocco/images/svg/dots.svg");
 
         @include tablet {
             display: none;

@@ -1,4 +1,4 @@
-$(document).ready(function () {
+(function () {
     let inScroll = false;
     let display = $(".wrapper__content");
     let sectS = $("section");
@@ -88,7 +88,6 @@ $(document).ready(function () {
     let md = new MobileDetect(window.navigator.userAgent);
     let isMobile = md.mobile();
 
-
     // https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
     if (isMobile) {
         $("body").swipe({
@@ -101,4 +100,4 @@ $(document).ready(function () {
             },
         });
     }
-});
+})();

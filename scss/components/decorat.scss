@@ -1,14 +1,14 @@
 section.welcome {
-    background: url("/2020-11-23-web-chocco/images/decorate/berry--1.png") 71% 83% no-repeat,
-        url("/2020-11-23-web-chocco/images/decorate/sheet--1.png") 71% 96% no-repeat,
-        url("/2020-11-23-web-chocco/images/decorate/sheet--2.png") 99% 70% no-repeat,
-        url("/2020-11-23-web-chocco/images/decorate/candybar.png") top 47% left 52vw no-repeat, //95% 46%
-        url("/2020-11-23-web-chocco/images/decorate/pattern--1.png") bottom right no-repeat;
+    background: url("/chocco/images/decorate/berry--1.png") 71% 83% no-repeat,
+        url("/chocco/images/decorate/sheet--1.png") 71% 96% no-repeat,
+        url("/chocco/images/decorate/sheet--2.png") 99% 70% no-repeat,
+        url("/chocco/images/decorate/candybar.png") top 47% left 52vw no-repeat, //95% 46%
+        url("/chocco/images/decorate/pattern--1.png") bottom right no-repeat;
 
     &::before {
         z-index: 100;
         position: absolute;
-        content: url("/2020-11-23-web-chocco/images/decorate/sheet--3.png");
+        content: url("/chocco/images/decorate/sheet--3.png");
         top: 89.5%;
         left: 3.5%;
     }
@@ -16,13 +16,13 @@ section.welcome {
     &::after {
         z-index: 100;
         position: absolute;
-        content: url("/2020-11-23-web-chocco/images/decorate/berry--2.png");
+        content: url("/chocco/images/decorate/berry--2.png");
         top: 92%;
         left: 81.5%;
     }
 
     @include tablet {
-        background: url("/2020-11-23-web-chocco/images/decorate/pattern--1.png") center right no-repeat;
+        background: url("/chocco/images/decorate/pattern--1.png") center right no-repeat;
 
         &::before {
             display: none;
@@ -36,7 +36,7 @@ section.welcome {
     }
 
     @include phone {
-        background: url("/2020-11-23-web-chocco/images/decorate/pattern--1.png") right top 20% / 66% no-repeat;
+        background: url("/chocco/images/decorate/pattern--1.png") right top 20% / 66% no-repeat;
 
         &::before {
             display: none;
@@ -54,12 +54,12 @@ section.welcome {
 
 
 section.why {
-    background: url("/2020-11-23-web-chocco/images/decorate/pattern--2.png") center left no-repeat;
+    background: url("/chocco/images/decorate/pattern--2.png") center left no-repeat;
 
     &::after {
         z-index: 100;
         position: absolute;
-        content: url("/2020-11-23-web-chocco/images/decorate/candyberry.png");
+        content: url("/chocco/images/decorate/candyberry.png");
         top: 72%;
         left: 0%;
     }
@@ -93,13 +93,14 @@ section.slider {
     background-color: #F8FAF9;
 }
 
+
 section.team {
     background: none;
 
     &::before {
         z-index: 0;
         position: absolute;
-        content: url("/2020-11-23-web-chocco/images/decorate/comp--berry4--pattern3png.png");
+        content: url("/chocco/images/decorate/comp--berry4--pattern3png.png");
         top: -29%;
         right: 0;
     }
@@ -107,7 +108,7 @@ section.team {
     &::after {
         z-index: 100;
         position: absolute;
-        content: url("/2020-11-23-web-chocco/images/decorate/berry--4.png");
+        content: url("/chocco/images/decorate/berry--4.png");
         top: 92%;
         left: 3%;
     }
@@ -119,12 +120,12 @@ section.team {
             content: "";
             width: rem(151.87px);
             height: rem(351px);
-            background: url("/2020-11-23-web-chocco/images/decorate/comp--berry4--pattern3png.png") center center / contain no-repeat;
+            background: url("/chocco/images/decorate/comp--berry4--pattern3png.png") center center / contain no-repeat;
             top: -30.5%;
         }
 
         &::after {
-            content: url("/2020-11-23-web-chocco/images/decorate/berry--4.png");
+            content: url("/chocco/images/decorate/berry--4.png");
             top: 91%;
             left: 3.5%;
         }
@@ -134,14 +135,20 @@ section.team {
         background: none;
 
         &::before {
-            background: url("/2020-11-23-web-chocco/images/decorate/comp--berry4--pattern3png.png") center center / contain no-repeat;
-            top: -27%;
+            width: rem(101.24px);
+            height: rem(234px);
+            background: url("/chocco/images/decorate/comp--berry4--pattern3png.png") center center / contain no-repeat;
+            top: -22%;
             right: -5%;
         }
 
         &::after {
             position: absolute;
-            content: url("/2020-11-23-web-chocco/images/decorate/berry--4.png");
+            content: "";
+            width: rem(89px);
+            height: rem(98px);
+            background:
+                url("/chocco/images/decorate/berry--4.png") center center / contain no-repeat;
             top: 94.5%;
             left: 0.5%;
         }
@@ -150,17 +157,19 @@ section.team {
     background-color: $white;
 }
 
+
 section.menu {
-    background: url("/2020-11-23-web-chocco/images/decorate/accord--bg.png") center center / cover no-repeat;
+    background: url("/chocco/images/decorate/accord--bg.png") center center / cover no-repeat;
 }
 
+
 section.reviews {
-    background: url("/2020-11-23-web-chocco/images/decorate/berry--5.png") top 13.5% right 2.5% no-repeat;
+    background: url("/chocco/images/decorate/berry--5.png") top 13.5% right 2.5% no-repeat;
 
     &::before {
         z-index: 100;
         position: absolute;
-        content: url("/2020-11-23-web-chocco/images/decorate/comp--berry6--pattern4.png");
+        content: url("/chocco/images/decorate/comp--berry6--pattern4.png");
         top: 78.5%;
         left: rem(-26px);
     }
@@ -173,7 +182,7 @@ section.reviews {
             content: "";
             width: rem(119px);
             height: rem(282px);
-            background: url("/2020-11-23-web-chocco/images/decorate/comp--berry6--pattern4.png") center center / contain no-repeat;
+            background: url("/chocco/images/decorate/comp--berry6--pattern4.png") center center / contain no-repeat;
             top: 76.5%;
         }
 
@@ -183,9 +192,10 @@ section.reviews {
 
     @include phone {
         background-position: top 2.5% right -8%;
+        background-size: 33%;
 
         &::before {
-            background: url("/2020-11-23-web-chocco/images/decorate/comp--berry6--pattern4--phone.png") center center / contain no-repeat;
+            background: url("/chocco/images/decorate/comp--berry6--pattern4--phone.png") center center / contain no-repeat;
             width: rem(122px);
             height: rem(235px);
             top: 83%;
@@ -207,7 +217,7 @@ section.video {
             content: "";
             width: rem(72px);
             height: rem(135px);
-            background: url("/2020-11-23-web-chocco/images/decorate/sheet--3.png") center center / contain no-repeat;
+            background: url("/chocco/images/decorate/sheet--3.png") center center / contain no-repeat;
             top: 76.5%;
             left: -18.5%;
         }
@@ -215,7 +225,7 @@ section.video {
         &::after {
             z-index: 100;
             position: absolute;
-            content: url("/2020-11-23-web-chocco/images/decorate/sheet--5.png");
+            content: url("/chocco/images/decorate/sheet--5.png");
             top: -17.5%;
             right: -17.5%;
         }
@@ -224,7 +234,7 @@ section.video {
             &::before {
                 width: rem(61.87px);
                 height: rem(116px);
-                background: url("/2020-11-23-web-chocco/images/decorate/sheet--3.png") center center / contain no-repeat;
+                background: url("/chocco/images/decorate/sheet--3.png") center center / contain no-repeat;
                 top: 47.5%;
                 left: -17.5%;
             }
@@ -233,7 +243,7 @@ section.video {
                 content: "";
                 width: rem(73.64px);
                 height: rem(63px);
-                background: url("/2020-11-23-web-chocco/images/decorate/sheet--5.png") center center / contain no-repeat;
+                background: url("/chocco/images/decorate/sheet--5.png") center center / contain no-repeat;
                 top: -13.5%;
                 right: -8.5%;
             }
@@ -243,7 +253,7 @@ section.video {
             &::before {
                 width: rem(61.87px);
                 height: rem(116px);
-                background: url("/2020-11-23-web-chocco/images/decorate/sheet--3.png") center center / contain no-repeat;
+                background: url("/chocco/images/decorate/sheet--3.png") center center / contain no-repeat;
                 top: 74.5%;
                 left: -14.5%;
             }
@@ -251,7 +261,7 @@ section.video {
             &::after {
                 width: rem(60px);
                 height: rem(51px);
-                background: url("/2020-11-23-web-chocco/images/decorate/sheet--5.png") center center / contain no-repeat;
+                background: url("/chocco/images/decorate/sheet--5.png") center center / contain no-repeat;
                 top: -17.5%;
                 right: -9.5%;
             }
@@ -261,7 +271,7 @@ section.video {
     &::after {
         z-index: 100;
         position: absolute;
-        content: url("/2020-11-23-web-chocco/images/decorate/berry--8.png");
+        content: url("/chocco/images/decorate/berry--8.png");
         top: 78.5%;
         right: 0;
     }
@@ -271,13 +281,14 @@ section.video {
             width: rem(109.14px);
             height: rem(147px);
             content: "";
-            background: url("/2020-11-23-web-chocco/images/decorate/berry--8.png") center center / contain no-repeat;
+            background: url("/chocco/images/decorate/berry--8.png") center center / contain no-repeat;
             top: 89.5%;
         }
     }
 
     @include phone {
         &::after {
+            top: 84.5%;
             right: -2%;
         }
     }
@@ -288,17 +299,25 @@ section.video {
 
 section.delivery {
     background:
-        url("/2020-11-23-web-chocco/images/decorate/berry--7.png") bottom 17.5% left 5% no-repeat,
-        url("/2020-11-23-web-chocco/images/decorate/sheet--4.png") bottom 20% right 1% no-repeat,
-        url("/2020-11-23-web-chocco/images/decorate/raspberry--bg.png") center center / cover no-repeat;
+        url("/chocco/images/decorate/berry--7.png") bottom 17.5% left 5% no-repeat,
+        url("/chocco/images/decorate/sheet--4.png") bottom 20% right 1% no-repeat,
+        url("/chocco/images/decorate/raspberry--bg.png") center center / cover no-repeat;
+    background-color: #CFDEDB;
 
     @include tablet {
-        background: url("/2020-11-23-web-chocco/images/decorate/raspberry--bg.png") center center / cover no-repeat;
+        background: url("/chocco/images/decorate/raspberry--bg.png") center center / cover no-repeat;
+        background-color: #CFDEDB;
     }
 
     @include phone {
-        background: url("/2020-11-23-web-chocco/images/decorate/raspberry--bg.png") center center / cover no-repeat;
+        background: url("/chocco/images/decorate/raspberry--bg.png") center center / cover no-repeat;
+        background-color: #CFDEDB;
     }
+}
 
-    background-color: #CFDEDB;
+section.contacts {
+    .container .map {
+        // background: url("/chocco/images/decorate/map.png") center center / cover no-repeat;
+        background-color: #61C4D9;
+    }
 }

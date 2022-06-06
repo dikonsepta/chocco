@@ -2,11 +2,11 @@
     @return $px / $f+0rem;
 }
 
-// @mixin desktab {
-//     @media (min-width: ($tablet -1px)) and (max-width: ($desktop +1px)) {
-//         @content;
-//     }
-// }
+@mixin desktab {
+    @media (min-width: (768px - 60px)) and (max-width: (1100px - 160px)) {
+        @content;
+    }
+}
 
 @mixin tablet {
     @media (max-width: $tablet) {
@@ -14,14 +14,20 @@
     }
 }
 
-// @mixin tabpho {
-//     @media (min-width: ($phone -1px)) and (max-width: ($tablet +1px)) {
-//         @content;
-//     }
-// }
+@mixin tabpho {
+    @media (min-width: (480px - 20px)) and (max-width: (768px - 60px)) {
+        @content;
+    }
+}
 
 @mixin phone {
     @media (max-width: $phone) {
+        @content;
+    }
+}
+
+@mixin phozero {
+    @media (min-width: (320px)) and (max-width: (480px - 20px)) {
         @content;
     }
 }

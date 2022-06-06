@@ -1,4 +1,4 @@
-$(document).ready(function () {
+(function () {
     $(".accordion__active").each((i, firstActive) => {
         let firstWrapper = $(firstActive).find(".accordion__wrapper");
         let firstInvisible = $(firstActive).find(".team__mission");
@@ -35,4 +35,4 @@ $(document).ready(function () {
             firstWrapper.height(String(firstInvisible.height()) + "px");
         });
     });
-});
+})();

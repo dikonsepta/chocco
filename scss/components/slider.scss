@@ -1,7 +1,5 @@
 .slider .container {
     position: relative;
-    padding-top: rem(60px);
-    padding-bottom: rem(60px);
 
     @include tablet {
         padding-top: 0;
@@ -121,7 +119,7 @@
 .item__preview {
     @each $color in (yellow, blue) {
         &.#{$color} {
-            background: url("/2020-11-23-web-chocco/images/decorate/comp--#{$color}bar.png") center center / contain no-repeat;
+            background: url("/chocco/images/decorate/comp--#{$color}bar.png") center center / contain no-repeat;
         }
     }
 
@@ -141,7 +139,7 @@
     @include phone {
         @each $color in (yellow, blue) {
             &.#{$color} {
-                background: url("/2020-11-23-web-chocco/images/decorate/comp--#{$color}bar--phone.png") center center / contain no-repeat;
+                background: url("/chocco/images/decorate/comp--#{$color}bar--phone.png") center center / contain no-repeat;
             }
         }
 
@@ -166,6 +164,7 @@
 }
 
 .product__title {
+    z-index: 100;
     margin: rem(24px) 0;
 
     @include tablet {
