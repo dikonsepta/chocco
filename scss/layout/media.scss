@@ -1,5 +1,5 @@
 @function rem($px) {
-    @return $px / $f+0rem;
+    @return calc($px / $f) + 0rem;
 }
 
 @mixin desktab {

@@ -117,7 +117,7 @@
 }
 
 .item__preview {
-    @each $color in (yellow, blue) {
+    @each $color in ('yellow', 'blue') {
         &.#{$color} {
             background: url("/chocco/images/decorate/comp--#{$color}bar.png") center center / contain no-repeat;
         }
@@ -137,7 +137,7 @@
     }
 
     @include phone {
-        @each $color in (yellow, blue) {
+        @each $color in ('yellow', 'blue') {
             &.#{$color} {
                 background: url("/chocco/images/decorate/comp--#{$color}bar--phone.png") center center / contain no-repeat;
             }
