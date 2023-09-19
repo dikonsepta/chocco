@@ -1,3 +1,7 @@
+:root {
+    color-scheme: only light;
+}
+
 // section.welcome {
 //     display: none;
 // }
@@ -40,18 +44,16 @@ $desktop: 1100px;
 $tablet: 768px;
 $phone: 480px;
 
-
 // color
 $green: #497870;
-$deepgreen: #365A49;
+$deepgreen: #365a49;
 $gray: #666666;
 $black: #292929;
-$white:#FFFFFF;
-
+$white: #ffffff;
 
 // общие стили
 * {
-    font-family: "Alegreya Sans", "Roboto", sans-serif;
+    font-family: 'Alegreya Sans', 'Roboto', sans-serif;
     font-style: normal;
     font-weight: normal;
     line-height: 1.22;
@@ -151,7 +153,6 @@ section {
 }
 
 section.template {
-
     .container {
         flex-flow: column nowrap;
         justify-content: center;
